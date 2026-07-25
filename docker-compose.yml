@@ -1,0 +1,37 @@
+services:
+  espocrm-nuevo-db:
+    image: mariadb:latest
+    container_name: espocrm-nuevo-db
+    environment:
+      MARIADB_ROOT_PASSWORD: root_password_espocrm_123
+      MARIADB_DATABASE: espocrm
+      MARIADB_USER: espocrm
+      MARIADB_PASSWORD: db_password_espocrm_123
+    volumes:
+      - espocrm-nuevo-db-data:/var/lib/mysql
+    restart: always
+
+  espocrm-nuevo:
+    image: espocrm/espocrm:latest
+    container_name: espocrm-nuevo
+    ports:
+      - "8090:80"
+    environment:
+      ESPOCRM_DATABASE_HOST: espocrm-nuevo-db
+      ESPOCRM_DATABASE_USER: espocrm
+      ESPOCRM_DATABASE_PASSWORD: db_password_espocrm_123
+      ESPOCRM_DATABASE_NAME: espocrm
+      ESPOCRM_SITE_URL: "http://localhost:8090"
+    volumes:
+      - espocrm-nuevo-data:/var/www/html/data
+      - espocrm-nuevo-custom:/var/www/html/custom
+      - espocrm-nuevo-client-custom:/var/www/html/client/custom
+    depends_on:
+      - espocrm-nuevo-db
+    restart: always
+
+volumes:
+  espocrm-nuevo-db-data:
+  espocrm-nuevo-data:
+  espocrm-nuevo-custom:
+  espocrm-nuevo-client-custom:

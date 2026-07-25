@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía 40 Horas — HRINSER</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--orange:#D97706;--dark:#111315;--light:#FAF8F5;--border:#E2DDD8}
+  body{font-family:'Inter',sans-serif;background:#fff;color:#111315;font-size:13px;line-height:1.7}
+  .cover{background:var(--dark);color:#fff;padding:60px 64px 48px;position:relative;overflow:hidden}
+  .cover::after{content:'LEY 21.561';position:absolute;right:-20px;bottom:-20px;font-size:120px;font-weight:900;color:rgba(255,255,255,.03);font-family:'JetBrains Mono',monospace;line-height:1;pointer-events:none}
+  .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:40px}
+  .logo-box{width:36px;height:36px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:18px;color:#fff}
+  .logo-text{font-weight:900;font-size:20px;letter-spacing:.15em}
+  .logo-sub{font-size:9px;letter-spacing:.2em;color:var(--orange);font-family:'JetBrains Mono',monospace;font-weight:700;display:block}
+  .tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--orange);font-weight:700;letter-spacing:.2em;margin-bottom:10px}
+  .cover h1{font-size:28px;font-weight:900;line-height:1.2;max-width:520px;margin-bottom:10px}
+  .cover-meta{font-size:11px;color:rgba(255,255,255,.5);font-family:'JetBrains Mono',monospace;margin-top:20px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px;display:flex;gap:24px;flex-wrap:wrap}
+  .body-wrap{max-width:820px;margin:0 auto;padding:48px 40px}
+  h2{font-size:16px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--dark);margin:36px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--orange)}
+  h3{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--dark);margin:20px 0 8px}
+  p{margin-bottom:12px;color:#3a3a3a}
+  .lead{font-size:14px;line-height:1.8;margin-bottom:28px;padding:20px 24px;border-left:3px solid var(--orange);background:var(--light)}
+  .alert{padding:16px 20px;margin:20px 0;border:1px solid;border-radius:0}
+  .alert-red{background:#fff5f5;border-color:#fca5a5;color:#7f1d1d}
+  .alert-amber{background:#fffbeb;border-color:#fcd34d;color:#78350f}
+  .alert-green{background:#f0fdf4;border-color:#86efac;color:#14532d}
+  .alert-title{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px}
+  table{width:100%;border-collapse:collapse;margin:14px 0 24px;font-size:12px}
+  th{background:var(--dark);color:#fff;padding:10px 12px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+  td{padding:10px 12px;border-bottom:1px solid var(--border)}
+  tr:nth-child(even) td{background:var(--light)}
+  .badge{display:inline-block;padding:2px 8px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace}
+  .green{background:#d1fae5;color:#065f46}.amber{background:#fef3c7;color:#92400e}.red{background:#fee2e2;color:#991b1b}
+  .timeline{border-left:3px solid var(--orange);padding-left:24px;margin:20px 0}
+  .tl-item{margin-bottom:20px;position:relative}
+  .tl-item::before{content:'';position:absolute;left:-31px;top:4px;width:12px;height:12px;background:var(--orange);border-radius:50%}
+  .tl-date{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;margin-bottom:4px}
+  .tl-title{font-weight:700;font-size:13px;color:var(--dark)}
+  .tl-desc{font-size:12px;color:#555;margin-top:4px}
+  ul{padding-left:20px;color:#3a3a3a;margin-bottom:16px}
+  li{margin-bottom:8px}
+  .footer-doc{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:10px;color:#aaa;font-family:'JetBrains Mono',monospace}
+  @media print{.cover{-webkit-print-color-adjust:exact;print-color-adjust:exact}th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="logo-row">
+    <div class="logo-box">H</div>
+    <div><span class="logo-text">HRINSER</span><span class="logo-sub">ACREDITACIÓN &amp; COMPLIANCE</span></div>
+  </div>
+  <div class="tag">// DICTAMEN · GUÍA DE IMPLEMENTACIÓN PRÁCTICA</div>
+  <h1>Guía de Implementación: Ley de las 40 Horas y su Impacto en Faenas Mineras Excepcionales</h1>
+  <div class="cover-meta">
+    <span>FECHA: 08 de Julio, 2026</span><span>LEY: 21.561</span><span>CLASIFICACIÓN: PÚBLICA</span><span>PDF · 2.1 MB</span>
+  </div>
+</div>
+
+<div class="body-wrap">
+  <p class="lead">Esta guía entrega a los encargados de acreditación y administradores de contratos las herramientas prácticas para adaptar sus sistemas de control de jornada laboral a los nuevos límites establecidos por la Ley 21.561 (Ley de las 40 Horas), con especial énfasis en faenas mineras que operan bajo régimen de jornada excepcional.</p>
+
+  <div class="alert alert-red">
+    <div class="alert-title">⚠ Obligatorio — Multa hasta 10 UTM por trabajador infractor</div>
+    El incumplimiento de los nuevos límites de jornada es una infracción directamente fiscalizable por la Dirección del Trabajo. Una empresa con 100 trabajadores en infracción puede enfrentar multas de hasta $60.000.000 CLP.
+  </div>
+
+  <h2>1. ¿Qué cambió con la Ley 21.561?</h2>
+  <p>La Ley 21.561, promulgada el 26 de abril de 2023 y en implementación gradual hasta 2028, redujo la jornada ordinaria máxima desde <strong>45 horas</strong> a <strong>40 horas semanales</strong> en un proceso de 5 etapas.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">Agosto 2024</div>
+      <div class="tl-title">Etapa 1 — Reducción a 44 horas semanales</div>
+      <div class="tl-desc">Primera reducción obligatoria. Aplicable a todos los contratos individuales y colectivos.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Abril 2026</div>
+      <div class="tl-title">Etapa 2 — Reducción a 42 horas semanales</div>
+      <div class="tl-desc">Segunda reducción. Contratos deben ser adecuados. El incumplimiento es directamente sancionable por DT.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2028</div>
+      <div class="tl-title">Etapa Final — 40 horas semanales</div>
+      <div class="tl-desc">Reducción definitiva. A esta fecha todos los contratos deberán reflejar el límite de 40h.</div>
+    </div>
+  </div>
+
+  <h2>2. Faenas con Jornada Excepcional (Artículo 38 C.T.)</h2>
+  <p>Las empresas del sector minero, de energía y de telecomunicaciones pueden solicitar a la Dirección del Trabajo una <strong>jornada excepcional</strong> que distribuye las horas en ciclos (ej: 7 días trabajados × 7 días libres). Estos regímenes tienen reglas especiales bajo la Ley 21.561.</p>
+
+  <div class="alert alert-amber">
+    <div class="alert-title">⚡ Atención — Faenas Excepcionales</div>
+    La jornada excepcional NO está exenta de la reducción de horas. El promedio ponderado del ciclo debe igualmente respetar el límite vigente (actualmente 42h semanales en promedio). La resolución de jornada excepcional debe ser renovada para adecuarla.
+  </div>
+
+  <h3>Tabla de Adecuación por Régimen de Jornada</h3>
+  <table>
+    <thead><tr><th>Régimen</th><th>Horas/Ciclo (Antes)</th><th>Horas/Ciclo (42h vigente)</th><th>Horas/Ciclo (40h 2028)</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td>4x4 (28 días ciclo)</td><td>180h</td><td>168h</td><td>160h</td><td><span class="badge amber">Requiere adecuación</span></td></tr>
+      <tr><td>7x7 (14 días ciclo)</td><td>90h</td><td>84h</td><td>80h</td><td><span class="badge amber">Requiere adecuación</span></td></tr>
+      <tr><td>5x2 (jornada estándar)</td><td>45h</td><td>42h</td><td>40h</td><td><span class="badge red">Incumplimiento frecuente</span></td></tr>
+      <tr><td>6x1 (6 días trabajados)</td><td>48h (límite conv.)</td><td>42h promedio</td><td>40h promedio</td><td><span class="badge amber">Verificar convenio</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Horas Extraordinarias — Nuevos Límites</h2>
+  <p>Las horas extraordinarias siguen reguladas por el Artículo 30 del Código del Trabajo. Sólo pueden pactarse para atender necesidades temporales. La Ley 21.561 no modificó el límite de <strong>2 horas diarias</strong>, pero al reducir la jornada ordinaria, el umbral de activación de la hora extra también se adelanta.</p>
+
+  <table>
+    <thead><tr><th>Parámetro</th><th>Antes (45h)</th><th>Hoy (42h)</th><th>2028 (40h)</th></tr></thead>
+    <tbody>
+      <tr><td>Jornada ordinaria semanal</td><td>45h</td><td>42h</td><td>40h</td></tr>
+      <tr><td>Horas extra permitidas/día</td><td>2h</td><td>2h</td><td>2h</td></tr>
+      <tr><td>Recargo hora extra</td><td>50%</td><td>50%</td><td>50%</td></tr>
+      <tr><td>Máximo mensual recomendado (DT)</td><td>45h</td><td>45h</td><td>45h</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. Lista de Verificación para Administradores de Contrato</h2>
+  <ul>
+    <li><strong>Revisar resoluciones de jornada excepcional vigentes</strong>: verificar si el texto de la resolución DT refleja el límite actualizado.</li>
+    <li><strong>Actualizar anexos de contrato</strong>: el artículo de jornada debe indicar el nuevo máximo vigente.</li>
+    <li><strong>Validar planillas de asistencia</strong>: el módulo HRINSER detecta automáticamente semanas con exceso de horas.</li>
+    <li><strong>Gestionar convenios colectivos</strong>: si el sindicato tiene convenio de jornada, debe ser adecuado antes del vencimiento de la etapa.</li>
+    <li><strong>Capacitar a supervisores</strong>: los encargados de turno deben conocer los nuevos límites para evitar infracciones operacionales.</li>
+  </ul>
+
+  <div class="alert alert-green">
+    <div class="alert-title">✓ HRINSER automatiza este proceso</div>
+    El módulo de cumplimiento de jornada de HRINSER calcula automáticamente el promedio de horas por ciclo, genera alertas cuando un contratista supera el límite vigente, y exporta informes listos para fiscalización de la DT.
+  </div>
+
+  <div class="footer-doc">
+    <span>HRINSER · Acreditación &amp; Compliance · Santiago, Chile</span>
+    <span>Guía Ley 40h · v2.1 · 2026</span>
+  </div>
+</div>
+</body>
+</html>
