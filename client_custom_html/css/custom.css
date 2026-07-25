@@ -161,10 +161,90 @@ footer#footer,
     min-height: 80px !important;
 }
 
-/* Resaltado de la columna receptora */
-.group-column-list.drop-hover {
-    background-color: rgba(99, 102, 241, 0.08) !important;
-    outline: 2px dashed var(--c-primary) !important;
-    outline-offset: -4px !important;
-    border-radius: 8px !important;
+/* ==========================================================================
+   9. HRINSER Corporate Login - Organic Pulse Background & Glassmorphism
+   (Aislado strictly a #main-container.login)
+   ========================================================================== */
+
+/* Fondo Orgánico Vivo con Animación Respiración (Pulse) - Estrictamente aislado a Login */
+body.login-page,
+#main-container.login {
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.22) 0%, rgba(15, 23, 42, 0.98) 70%) !important;
+    animation: organicPulse 8s ease-in-out infinite alternate !important;
+    min-height: 100vh;
 }
+
+@keyframes organicPulse {
+    0% {
+        background: radial-gradient(circle at 30% 35%, rgba(99, 102, 241, 0.28) 0%, rgba(15, 23, 42, 0.98) 65%) !important;
+    }
+    50% {
+        background: radial-gradient(circle at 70% 65%, rgba(168, 85, 247, 0.25) 0%, rgba(15, 23, 42, 0.98) 75%) !important;
+    }
+    100% {
+        background: radial-gradient(circle at 35% 75%, rgba(236, 72, 153, 0.22) 0%, rgba(15, 23, 42, 0.98) 70%) !important;
+    }
+}
+
+/* Tarjeta Glassmorphism de Inicio de Sesión */
+#main-container.login #login.panel {
+    background: rgba(30, 41, 59, 0.82) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 35px rgba(99, 102, 241, 0.25) !important;
+    border-radius: 20px !important;
+    padding: 10px !important;
+}
+
+/* Logo Oficial HRINSER únicamente en Login */
+#main-container.login #login .logo-container,
+#main-container.login .logo-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 10px 0 !important;
+    text-align: center !important;
+}
+
+#main-container.login #login .logo-container img,
+#main-container.login .logo-container img,
+#main-container.login .logo-container .logo {
+    display: block !important;
+    visibility: visible !important;
+    content: url("client/img/logo_hrinser.svg") !important;
+    max-height: 52px !important;
+    width: auto !important;
+    margin: 0 auto !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2)) !important;
+}
+
+#main-container.login #login .logo-container::after,
+#main-container.login .logo-container::after {
+    display: none !important;
+    content: "" !important;
+}
+
+/* Botón de Iniciar Sesión Estilizado */
+#main-container.login #btn-login {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+    border: none !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    padding: 10px 24px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+#main-container.login #btn-login:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5) !important;
+}
+
+/* Ocultar footer únicamente en la pantalla de inicio de sesión */
+#main-container.login footer {
+    display: none !important;
+}
+

@@ -171,12 +171,12 @@ footer#footer,
 
 /* ==========================================================================
    9. HRINSER Corporate Login - Organic Pulse Background & Glassmorphism
+   (Aislado estrictamente a #main-container.login)
    ========================================================================== */
 
-/* Fondo Orgánico Vivo con Animación Respiración (Pulse) */
+/* Fondo Orgánico Vivo con Animación Respiración (Pulse) - Estrictamente aislado a Login */
 body.login-page,
-#main-container.login,
-.container.content {
+#main-container.login {
     background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.22) 0%, rgba(15, 23, 42, 0.98) 70%) !important;
     animation: organicPulse 8s ease-in-out infinite alternate !important;
     min-height: 100vh;
@@ -195,7 +195,7 @@ body.login-page,
 }
 
 /* Tarjeta Glassmorphism de Inicio de Sesión */
-#login.panel {
+#main-container.login #login.panel {
     background: rgba(30, 41, 59, 0.82) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
@@ -205,31 +205,37 @@ body.login-page,
     padding: 10px !important;
 }
 
-/* Marca Corporativa HRINSER en lugar del logo original */
-#login .logo-container img {
-    display: none !important;
-}
-
-#login .logo-container {
+/* Logo Oficial HRINSER únicamente en Login */
+#main-container.login #login .logo-container,
+#main-container.login .logo-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 10px 0 !important;
     text-align: center !important;
-    padding: 15px 0 5px 0 !important;
 }
 
-#login .logo-container::after {
-    content: HRINSER;
-    font-family: 'Outfit', 'Inter', sans-serif !important;
-    font-size: 36px !important;
-    font-weight: 900 !important;
-    letter-spacing: 4px !important;
-    background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+#main-container.login #login .logo-container img,
+#main-container.login .logo-container img,
+#main-container.login .logo-container .logo {
     display: block !important;
-    text-shadow: 0 0 20px rgba(192, 132, 252, 0.3) !important;
+    visibility: visible !important;
+    content: url("client/img/logo_hrinser.svg") !important;
+    max-height: 52px !important;
+    width: auto !important;
+    margin: 0 auto !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2)) !important;
+}
+
+#main-container.login #login .logo-container::after,
+#main-container.login .logo-container::after {
+    display: none !important;
+    content: "" !important;
 }
 
 /* Botón de Iniciar Sesión Estilizado */
-#btn-login {
+#main-container.login #btn-login {
     background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
     border: none !important;
     font-weight: 700 !important;
@@ -240,7 +246,97 @@ body.login-page,
     transition: all 0.3s ease !important;
 }
 
-#btn-login:hover {
+#main-container.login #btn-login:hover {
     transform: translateY(-2px) !important;
     box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5) !important;
+}
+
+/* Ocultar footer únicamente en la pantalla de inicio de sesión */
+#main-container.login footer {
+    display: none !important;
+}
+
+
+/* ==========================================================================
+   12. HRINSER LOGIN CORPORATIVO ISOLATED - AURORA BACKGROUND & HRINSER BRAND
+   ========================================================================== */
+
+/* Fondo Aurora Vivo 100% Aislado al Login (No afecta el Dashboard interno) */
+#main-container.login {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: linear-gradient(-45deg, #2e1065, #1e1b4b, #581c87, #0f172a, #3b0764, #1e293b, #701a75) !important;
+    background-size: 400% 400% !important;
+    animation: auroraGlow 12s ease-in-out infinite alternate !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 99999 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@keyframes auroraGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 50% 100%; }
+}
+
+/* Contenedor Flotante Centrado */
+#main-container.login .container,
+#main-container.login .container.content,
+#main-container.login .container-centering {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Ocultar Imagen Rota completamente */
+#main-container.login #login .logo-container img,
+.login-container img,
+#login img.logo,
+#login img {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+}
+
+/* Marca HRINSER con Tipografía Oficial idéntica al Header del CRM */
+#main-container.login #login .logo-container,
+.logo-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 10px 0 !important;
+    text-align: center !important;
+}
+
+#main-container.login #login .logo-container::after,
+.logo-container::after {
+    content: "HRINSER" !important;
+    font-family: 'Outfit', 'Inter', 'Montserrat', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 900 !important;
+    letter-spacing: 7px !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 45px rgba(168, 85, 247, 0.6) !important;
+}
+
+/* Ocultar Footer de EspoCRM sólo en el Login */
+#main-container.login footer {
+    display: none !important;
 }

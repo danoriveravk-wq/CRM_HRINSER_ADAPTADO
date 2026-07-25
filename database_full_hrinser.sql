@@ -234,7 +234,7 @@ CREATE TABLE `action_history_record` (
   KEY `IDX_USER_ID` (`user_id`),
   KEY `IDX_AUTH_TOKEN_ID` (`auth_token_id`),
   KEY `IDX_AUTH_LOG_RECORD_ID` (`auth_log_record_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -294,7 +294,14 @@ INSERT INTO `action_history_record` VALUES
 ('6a6470b2b4d68286d',0,47,'Opportunity',NULL,'update','2026-07-25 08:15:46','172.21.0.1','opp_0000000000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901'),
 ('6a6470ef6ca9a4292',0,48,'Task',NULL,'update','2026-07-25 08:16:47','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901'),
 ('6a6470f0ba01f4367',0,49,'Task',NULL,'update','2026-07-25 08:16:48','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901'),
-('6a6470fa5c841214b',0,50,'Task',NULL,'read','2026-07-25 08:16:58','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901');
+('6a6470fa5c841214b',0,50,'Task',NULL,'read','2026-07-25 08:16:58','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901'),
+('6a647eb2150125c72',0,51,'Case',NULL,'update','2026-07-25 09:15:30','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647eb2f33d4f1a3',0,52,'Case',NULL,'update','2026-07-25 09:15:30','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f4ca8baa92e5',0,53,'Case',NULL,'update','2026-07-25 09:18:04','172.21.0.1','case_000000000001','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f4dc401f2c30',0,54,'Case',NULL,'update','2026-07-25 09:18:05','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f52dd7669c7c',0,55,'Case',NULL,'update','2026-07-25 09:18:10','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f54138a766e3',0,56,'Case',NULL,'update','2026-07-25 09:18:12','172.21.0.1','case_000000000001','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f54d54ac75f9',0,57,'Case',NULL,'update','2026-07-25 09:18:12','172.21.0.1','case_000000000001','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170');
 /*!40000 ALTER TABLE `action_history_record` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -534,7 +541,17 @@ INSERT INTO `auth_log_record` VALUES
 ('6a644c7074fb2bf84',0,'admin','172.21.0.1','2026-07-25 05:41:04',1,'CREDENTIALS',1784958064.2502,'http://localhost/api/v1/App/user','GET','Espo',NULL,NULL,NULL),
 ('6a644cab756f2c901',0,'admin','172.21.0.1','2026-07-25 05:42:03',0,NULL,1784958123.0895,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a644cab750c340f4'),
 ('6a645e288caf990b1',0,'vanessa','127.0.0.1','2026-07-25 06:56:40',0,NULL,1784962600.3369,'http://localhost/api/v1/App/user','GET','Espo',NULL,'usr_vanessa_0001',NULL),
-('6a64773cd789e24ad',0,'admin','172.21.0.1','2026-07-25 08:43:40',0,NULL,1784969020.6472,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a64773cd67329194');
+('6a64773cd789e24ad',0,'admin','172.21.0.1','2026-07-25 08:43:40',0,NULL,1784969020.6472,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a64773cd67329194'),
+('6a6477f550e9a3583',0,'admin','172.21.0.1','2026-07-25 08:46:45',0,NULL,1784969205.0944,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6477f54f2c2f8bf'),
+('6a6479b1d8e80e3c2',0,'admin','172.21.0.1','2026-07-25 08:54:09',0,NULL,1784969649.655,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6479b1d71e8c2f9'),
+('6a6479ee4c0b1aa4d',0,'admin','172.21.0.1','2026-07-25 08:55:10',0,NULL,1784969710.0751,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6479ee4a613ed0e'),
+('6a647a7957903d9b5',0,'admin','172.21.0.1','2026-07-25 08:57:29',0,NULL,1784969849.1287,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647a7955d589e6a'),
+('6a647b11439bb8fc8',0,'admin','172.21.0.1','2026-07-25 09:00:01',0,NULL,1784970001.035,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647b11432ae302c'),
+('6a647b915351160e3',0,'admin','172.21.0.1','2026-07-25 09:02:09',0,NULL,1784970129.1064,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647b9151a41381f'),
+('6a647bda9f0434c77',0,'admin','172.21.0.1','2026-07-25 09:03:22',0,NULL,1784970202.4178,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647bda9d493fde2'),
+('6a647c965d23a71ac',0,'admin','172.21.0.1','2026-07-25 09:06:30',0,NULL,1784970389.917,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647c96592b307ec'),
+('6a647d7c8a7584170',0,'admin','172.21.0.1','2026-07-25 09:10:20',0,NULL,1784970620.3059,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647d7c8933cc401'),
+('6a6480fb58ebefc8b',0,'admin','172.21.0.1','2026-07-25 09:25:15',0,NULL,1784971515.0609,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6480fb56f5c5ace');
 /*!40000 ALTER TABLE `auth_log_record` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -578,7 +595,17 @@ LOCK TABLES `auth_token` WRITE;
 /*!40000 ALTER TABLE `auth_token` DISABLE KEYS */;
 INSERT INTO `auth_token` VALUES
 ('6a644cab750c340f4',0,'238c7402cfae85f619f09fb97c85579b',NULL,'1b712cda4e05b3d0601a8c098b5f914e','172.21.0.1',0,1,'2026-07-25 08:40:10','2026-07-25 05:42:03','2026-07-25 08:40:10','6a644c0d1b6a80478',NULL),
-('6a64773cd67329194',0,'8de6970af1314d6c4d1c12065e6fe8de',NULL,'1d614073f4ecab8b1a725abccc70e137','172.21.0.1',0,1,'2026-07-25 08:43:44','2026-07-25 08:43:40','2026-07-25 08:43:44','6a644c0d1b6a80478',NULL);
+('6a64773cd67329194',0,'8de6970af1314d6c4d1c12065e6fe8de',NULL,'1d614073f4ecab8b1a725abccc70e137','172.21.0.1',0,1,'2026-07-25 08:43:44','2026-07-25 08:43:40','2026-07-25 08:43:44','6a644c0d1b6a80478',NULL),
+('6a6477f54f2c2f8bf',0,'a14ad1a7386a0a4fcae1529ff437ffba',NULL,'23ba7cb66bc8371984d9497b62381c61','172.21.0.1',0,1,'2026-07-25 08:46:49','2026-07-25 08:46:45','2026-07-25 08:46:49','6a644c0d1b6a80478',NULL),
+('6a6479b1d71e8c2f9',0,'9fea6d5ab0de19e36bb73e28a231e873',NULL,'eda1ddbc518079a305406eef280bd07b','172.21.0.1',0,1,'2026-07-25 08:54:37','2026-07-25 08:54:09','2026-07-25 08:54:37','6a644c0d1b6a80478',NULL),
+('6a6479ee4a613ed0e',0,'f38ea04fa159d4332ce5ff11ec9d4822',NULL,'93eb3b055203227fae2413a16ba2db36','172.21.0.1',0,1,'2026-07-25 08:56:42','2026-07-25 08:55:10','2026-07-25 08:56:42','6a644c0d1b6a80478',NULL),
+('6a647a7955d589e6a',0,'23d89537bc34aee0b1ac607a8194b8f9',NULL,'886e2003b8133c718f80fee75c841078','172.21.0.1',0,1,'2026-07-25 08:58:29','2026-07-25 08:57:29','2026-07-25 08:58:29','6a644c0d1b6a80478',NULL),
+('6a647b11432ae302c',0,'c66b82d004e9e1347819dc99cae78af9',NULL,'d500105d5d32858f90b3a53104cbb376','172.21.0.1',0,1,'2026-07-25 09:00:03','2026-07-25 09:00:01','2026-07-25 09:00:03','6a644c0d1b6a80478',NULL),
+('6a647b9151a41381f',0,'0fa6d9db8c31cab308bee9a8ff426279',NULL,'46ce68dd639025afc0e437676606164c','172.21.0.1',0,1,'2026-07-25 09:02:31','2026-07-25 09:02:09','2026-07-25 09:02:31','6a644c0d1b6a80478',NULL),
+('6a647bda9d493fde2',0,'7040885e812984bf0e0d07de08a65481',NULL,'995e9c326b6f2304194ba03d70f17879','172.21.0.1',0,1,'2026-07-25 09:04:14','2026-07-25 09:03:22','2026-07-25 09:04:14','6a644c0d1b6a80478',NULL),
+('6a647c96592b307ec',0,'804c9029b705434d6fa1189b6bf8ada8',NULL,'366fd0bb2495442688af65b5bcd8f995','172.21.0.1',0,1,'2026-07-25 09:10:17','2026-07-25 09:06:30','2026-07-25 09:10:17','6a644c0d1b6a80478',NULL),
+('6a647d7c8933cc401',0,'9ea57024b25ad48a90c37b550eea1f14',NULL,'9b7d510886393a876a20e5544fc90fcc','172.21.0.1',0,1,'2026-07-25 09:18:38','2026-07-25 09:10:20','2026-07-25 09:18:38','6a644c0d1b6a80478',NULL),
+('6a6480fb56f5c5ace',0,'03ac06238fdf29abd28cdcccbe574c53',NULL,'a22a5550963dea6e3947313d6834917b','172.21.0.1',1,1,'2026-07-25 09:26:48','2026-07-25 09:25:15','2026-07-25 09:26:48','6a644c0d1b6a80478',NULL);
 /*!40000 ALTER TABLE `auth_token` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -1075,8 +1102,8 @@ LOCK TABLES `case` WRITE;
 /*!40000 ALTER TABLE `case` DISABLE KEYS */;
 INSERT INTO `case` VALUES
 ('6a644e168ef1a1ef2','q',1,1,'New','Normal',NULL,NULL,0,'2026-07-25 05:48:06','2026-07-25 06:08:07','2026-07-25 05:48:06',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478','6a644c0d1b6a80478',1),
-('case_000000000001','Revisión pase de ingreso conductores turno A - División El Teniente',0,2,'In Process','High',NULL,NULL,0,'2026-07-25 06:23:46',NULL,NULL,'acc_codelco_00001',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
-('case_000000000002','Auditoría cotizaciones previsionales F30-1 contratista Sigdo Koppers',0,3,'Closed','Normal',NULL,NULL,0,'2026-07-25 06:23:46',NULL,NULL,'acc_sk_0000000004',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0);
+('case_000000000001','Revisión pase de ingreso conductores turno A - División El Teniente',0,2,'Duplicate','High',NULL,NULL,0,'2026-07-25 06:23:46','2026-07-25 09:18:12','2026-07-25 09:18:12','acc_codelco_00001',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',3),
+('case_000000000002','Auditoría cotizaciones previsionales F30-1 contratista Sigdo Koppers',0,3,'New','Normal',NULL,NULL,0,'2026-07-25 06:23:46','2026-07-25 09:18:10','2026-07-25 09:18:10','acc_sk_0000000004',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',4);
 /*!40000 ALTER TABLE `case` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -2941,7 +2968,9 @@ INSERT INTO `kanban_order` VALUES
 ('6a6470ef721970961',0,3,'Started','tsk_real_000003','Task','6a644c0d1b6a80478'),
 ('6a6470f0bf961fc25',0,0,'Not Started','task_adm_0000002','Task','6a644c0d1b6a80478'),
 ('6a6470f0bf98c2cf7',0,1,'Not Started','tsk_real_000001','Task','6a644c0d1b6a80478'),
-('6a6470f0bf9ac34b0',0,2,'Not Started','tsk_real_000002','Task','6a644c0d1b6a80478');
+('6a6470f0bf9ac34b0',0,2,'Not Started','tsk_real_000002','Task','6a644c0d1b6a80478'),
+('6a647f52e30ed4646',0,0,'New','case_000000000002','Case','6a644c0d1b6a80478'),
+('6a647f54da09e6086',0,0,'Duplicate','case_000000000001','Case','6a644c0d1b6a80478');
 /*!40000 ALTER TABLE `kanban_order` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -3770,7 +3799,7 @@ CREATE TABLE `note` (
   KEY `IDX_MODIFIED_BY_ID` (`modified_by_id`),
   KEY `IDX_SUPER_PARENT` (`super_parent_id`,`super_parent_type`),
   FULLTEXT KEY `IDX_SYSTEM_FULL_TEXT_SEARCH` (`post`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3802,6 +3831,13 @@ INSERT INTO `note` VALUES
 ('6a647063ecde7ccd5',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Completed\"}','Update',NULL,28,0,0,0,'2026-07-25 08:14:27','2026-07-25 08:14:27','tsk_real_000004','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
 ('6a6470ef6bcb9f6b2',0,NULL,'{\"fields\":[\"dateEnd\"],\"attributes\":{\"was\":{\"dateEnd\":null,\"dateEndDate\":\"2026-08-01\"},\"became\":{\"dateEnd\":\"2026-08-02 04:00:00\",\"dateEndDate\":\"2026-08-01\"}},\"value\":\"Started\"}','Update',NULL,29,0,0,0,'2026-07-25 08:16:47','2026-07-25 08:16:47','tsk_real_000002','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
 ('6a6470f0b90f37964',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Not Started\"}','Update',NULL,30,0,0,0,'2026-07-25 08:16:48','2026-07-25 08:16:48','tsk_real_000002','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647eb21106db2b1',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Pending\"}','Update',NULL,31,0,0,0,'2026-07-25 09:15:30','2026-07-25 09:15:30','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647eb2f1ea0a45c',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Assigned\"}','Update',NULL,32,0,0,0,'2026-07-25 09:15:30','2026-07-25 09:15:30','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f4ca5f7e8886',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Rejected\"}','Update',NULL,33,0,0,0,'2026-07-25 09:18:04','2026-07-25 09:18:04','case_000000000001','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f4dc2eedba0d',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Pending\"}','Update',NULL,34,0,0,0,'2026-07-25 09:18:05','2026-07-25 09:18:05','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f52dca0617da',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"New\"}','Update',NULL,35,0,0,0,'2026-07-25 09:18:10','2026-07-25 09:18:10','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f5412e21c85a',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Closed\"}','Update',NULL,36,0,0,0,'2026-07-25 09:18:12','2026-07-25 09:18:12','case_000000000001','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f54d4890f31f',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Duplicate\"}','Update',NULL,37,0,0,0,'2026-07-25 09:18:12','2026-07-25 09:18:12','case_000000000001','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
 ('note_real_0000001',0,'Vanessa Galdames aprobó la carpeta de acreditación de subcontratistas Codelco El Teniente.',NULL,'Post',NULL,7,1,0,0,'2026-06-10 07:44:05',NULL,NULL,NULL,NULL,NULL,'usr_vanessa_0001',NULL,NULL,NULL),
 ('note_real_0000002',0,'Francisca Pirma emitió y validó el Certificado F30-1 de Sigdo Koppers Montajes Industriales.',NULL,'Post',NULL,8,1,0,0,'2026-06-25 07:44:05',NULL,NULL,NULL,NULL,NULL,'usr_francisc_002',NULL,NULL,NULL),
 ('note_real_0000003',0,'Carlos Mendoza presentó la propuesta comercial para el Servicio de Control de Acceso Los Bronces por $22.000.000 CLP.',NULL,'Post',NULL,9,1,0,0,'2026-07-05 07:44:05',NULL,NULL,NULL,NULL,NULL,'usr_carlos_00003',NULL,NULL,NULL),
@@ -5781,4 +5817,4 @@ SET AUTOCOMMIT=@OLD_AUTOCOMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-07-25  8:44:06
+-- Dump completed on 2026-07-25  9:26:49
