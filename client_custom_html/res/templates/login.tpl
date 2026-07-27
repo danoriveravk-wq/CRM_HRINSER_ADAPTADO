@@ -1,9 +1,9 @@
 <div class="split-login-wrapper">
-    <!-- LEFT HERO PANEL CON 3 FOTOS EN ROTACIÓN -->
+    <!-- LEFT HERO PANEL CON 3 FOTOS EN ROTACIÓN (CLASES PURAS CSS) -->
     <div class="login-hero-panel">
-        <div class="hero-bg active" style="background-image: url(&quot;client/custom/img/login_bg/mining.webp&quot;);"></div>
-        <div class="hero-bg" style="background-image: url(&quot;client/custom/img/login_bg/forest.jpg&quot;);"></div>
-        <div class="hero-bg" style="background-image: url(&quot;client/custom/img/login_bg/city.jpg&quot;);"></div>
+        <div class="hero-bg slide-1 active"></div>
+        <div class="hero-bg slide-2"></div>
+        <div class="hero-bg slide-3"></div>
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
@@ -109,42 +109,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    (function() {
-        let currentLoginSlide = 0;
-        function rotateLoginSlides() {
-            const hero = document.querySelector('.login-hero-panel');
-            if (!hero) return;
-            const slides = hero.querySelectorAll('.hero-bg');
-            const dots = hero.querySelectorAll('.dot');
-            if (!slides.length) return;
-
-            slides[currentLoginSlide].classList.remove('active');
-            if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.remove('active');
-
-            currentLoginSlide = (currentLoginSlide + 1) % slides.length;
-
-            slides[currentLoginSlide].classList.add('active');
-            if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.add('active');
-        }
-
-        window.gotoLoginSlide = function(index) {
-            const hero = document.querySelector('.login-hero-panel');
-            if (!hero) return;
-            const slides = hero.querySelectorAll('.hero-bg');
-            const dots = hero.querySelectorAll('.dot');
-            if (!slides[index]) return;
-
-            slides.forEach(s => s.classList.remove('active'));
-            dots.forEach(d => d.classList.remove('active'));
-
-            currentLoginSlide = index;
-            slides[currentLoginSlide].classList.add('active');
-            if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.add('active');
-        };
-
-        if (window.loginSlideInterval) clearInterval(window.loginSlideInterval);
-        window.loginSlideInterval = setInterval(rotateLoginSlides, 5000);
-    })();
-</script>

@@ -58,28 +58,34 @@
             <a href="https://www.espocrm.com" title="Powered by EspoCRM" rel="noopener" target="_blank">EspoCRM, Inc.</a></p>
         </footer>
 
-        <!-- SCRIPT GLOBAL PERMANENTE DE ROTACIÓN AUTOMÁTICA DE FOTOS DE LOGIN -->
+        <!-- SCRIPT GUARANTEED SLIDER ROTATOR (3.5s) -->
         <script nonce="{{nonce}}">
             (function() {
                 'use strict';
-                let currentLoginSlide = 0;
+                let currentSlideIndex = 0;
+                let sliderTimer = null;
 
-                function rotateLoginSlides() {
-                    if (!document.body || !document.body.classList.contains('login-page')) return;
+                function rotate() {
                     const hero = document.querySelector('.login-hero-panel');
                     if (!hero) return;
-
                     const slides = hero.querySelectorAll('.hero-bg');
                     const dots = hero.querySelectorAll('.dot');
                     if (!slides || slides.length < 2) return;
 
-                    slides[currentLoginSlide].classList.remove('active');
-                    if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.remove('active');
+                    slides[currentSlideIndex].classList.remove('active');
+                    if (dots[currentSlideIndex]) dots[currentSlideIndex].classList.remove('active');
 
-                    currentLoginSlide = (currentLoginSlide + 1) % slides.length;
+                    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
 
-                    slides[currentLoginSlide].classList.add('active');
-                    if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.add('active');
+                    slides[currentSlideIndex].classList.add('active');
+                    if (dots[currentSlideIndex]) dots[currentSlideIndex].classList.add('active');
+                }
+
+                function initSlider() {
+                    if (sliderTimer) return;
+                    const hero = document.querySelector('.login-hero-panel');
+                    if (!hero) return;
+                    sliderTimer = setInterval(rotate, 3500);
                 }
 
                 window.gotoLoginSlide = function(index) {
@@ -92,12 +98,30 @@
                     slides.forEach(s => s.classList.remove('active'));
                     dots.forEach(d => d.classList.remove('active'));
 
-                    currentLoginSlide = index;
-                    slides[currentLoginSlide].classList.add('active');
-                    if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.add('active');
+                    currentSlideIndex = index;
+                    slides[currentSlideIndex].classList.add('active');
+                    if (dots[currentSlideIndex]) dots[currentSlideIndex].classList.add('active');
                 };
 
-                setInterval(rotateLoginSlides, 5000);
+                const observer = new MutationObserver(function() {
+                    if (document.querySelector('.login-hero-panel')) {
+                        initSlider();
+                    } else {
+                        if (sliderTimer) {
+                            clearInterval(sliderTimer);
+                            sliderTimer = null;
+                        }
+                    }
+                });
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    observer.observe(document.body, { childList: true, subtree: true });
+                    initSlider();
+                });
+
+                // Fallback check
+                setTimeout(initSlider, 1000);
+                setTimeout(initSlider, 2000);
             })();
         </script>
     </body>

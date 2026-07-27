@@ -68,6 +68,17 @@ body.login-page footer {
     transform: scale(1.0) !important;
 }
 
+/* CARGA DE FOTOS DIRECTAMENTE EN CSS PURA (SIN RIESGO DE COMILLAS HANDLEBARS) */
+.login-hero-panel .hero-bg.slide-1 {
+    background-image: url('../img/login_bg/mining.webp') !important;
+}
+.login-hero-panel .hero-bg.slide-2 {
+    background-image: url('../img/login_bg/forest.jpg') !important;
+}
+.login-hero-panel .hero-bg.slide-3 {
+    background-image: url('../img/login_bg/city.jpg') !important;
+}
+
 .login-hero-panel .hero-overlay {
     position: absolute !important;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -185,18 +196,26 @@ body.login-page footer {
     background: #0F172A !important;
 }
 
-.login-form-panel #btn-login {
+/* CENTRADO PERFECTO DEL BOTÓN INICIAR SESIÓN */
+.login-form-panel #btn-login,
+#login #btn-login,
+#btn-login {
     background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
     color: #FFFFFF !important;
     font-weight: 800 !important;
     font-size: 13px !important;
     letter-spacing: 1.5px !important;
     text-transform: uppercase !important;
-    padding: 14px !important;
+    padding: 14px 20px !important;
     border-radius: 8px !important;
     border: none !important;
     width: 100% !important;
     box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
 }
 
 /* 2. FONDO PRINCIPAL OSCURO LIMPIO (#171923) INTERIOR CRM */
