@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TEMA 14 DEFINITIVO: ANTOFAGASTA MINERAL (FIEL A LA FOTO 2)
+   TEMA 14 DEFINITIVO: ANTOFAGASTA MINERAL CON CORRECCIONES DE INTERFAZ
    ========================================================================== */
 
 /* 1. Fondo VIVO únicamente en la pantalla de LOGIN */
@@ -31,19 +31,32 @@ body:not(.login-page) .container.content,
     color: #0F172A !important;
 }
 
-/* 3. MENÚ LATERAL (SIDEBAR) EN AZUL ANTRACITA FAENA (#1E293B) */
+/* 3. MENÚ LATERAL (SIDEBAR) EN AZUL ANTRACITA FAENA CON PADDING CONFORME */
 #sidebar, .navbar-vertical, .sidebar-nav {
     background-color: #1E293B !important;
     border-right: 1px solid #334155 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
 }
 
-#sidebar .nav-link, #sidebar a, #sidebar li a {
+#sidebar .nav-link, 
+#sidebar a, 
+#sidebar li a, 
+#sidebar .navbar-nav > li > a {
     color: #94A3B8 !important;
+    padding: 10px 16px !important;
+    margin: 2px 0 !important;
+    display: block !important;
+    text-decoration: none !important;
 }
 
-#sidebar .nav-link:hover, #sidebar a:hover, #sidebar li.active a {
+#sidebar .nav-link:hover, 
+#sidebar a:hover, 
+#sidebar li.active a, 
+#sidebar .navbar-nav > li.active > a {
     color: #FFFFFF !important;
     background-color: rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
 }
 
 /* LOGO HRINSER EN COBRE INDUSTRIAL (#D97706) */
@@ -73,7 +86,7 @@ body:not(.login-page) .container.content,
     text-transform: uppercase !important;
 }
 
-/* 4. ENCABEZADO SUPERIOR BLANCO LIMPIO (#FFFFFF) FIEL A LA FOTO 2 */
+/* 4. ENCABEZADO SUPERIOR BLANCO LIMPIO (#FFFFFF) */
 #header, .navbar:not(.navbar-vertical), #navbar {
     background-color: #FFFFFF !important;
     border-bottom: 1px solid #E2E8F0 !important;
@@ -85,7 +98,7 @@ body:not(.login-page) .container.content,
 
 /* 5. TARJETAS Y CAJAS 100% BLANCO PURO (#FFFFFF) */
 .panel, .dashlet, .cell, .modal-content, .card,
-.list-group-item, .table, .table tr, .table td {
+.list-group-item:not(.show-more), .table, .table tr, .table td {
     background: #FFFFFF !important;
     background-color: #FFFFFF !important;
     border-color: #E2E8F0 !important;
@@ -105,69 +118,52 @@ body:not(.login-page) .container.content,
     font-weight: 700 !important;
 }
 
-.table-hover tbody tr:hover, .list-group-item:hover {
+.table-hover tbody tr:hover {
     background-color: #F8FAFC !important;
 }
 
-/* 6. ELIMINAR CAPSULAS BLANCAS/GRISES Y SUBRAYADOS DE LOS TITULOS DE TAREAS */
-.dashlet .action-link,
-.dashlet a,
-.dashlet .cell[data-name=name] a,
-.dashlet [data-name=name] a,
-.cell[data-name=name] a,
-a, a:link, a:visited, a:focus, a:active {
-    background: transparent !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
+/* 6. NUMEROS Y MESES DE GRAFICOS EN OSCURO NÍTIDO (#0F172A) */
+.flotr-tick-label,
+.tickLabel,
+.flotr-axis-title,
+.flotr-grid-label,
+.flotr-legend-label,
+div.flotr-tick-label {
     color: #0F172A !important;
-    font-weight: 500 !important;
-    text-decoration: none !important;
+    fill: #0F172A !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
 }
 
-a:hover, .cell a:hover, .dashlet a:hover {
-    color: #2563EB !important;
-    text-decoration: none !important;
+/* 7. CALENDARIO 100% BLANCO (#FFFFFF) */
+.calendar-dashlet,
+.calendar,
+.full-calendar,
+.fc,
+.fc-view,
+.fc-view-container,
+.fc-widget-content,
+.fc-widget-header,
+.fc-head,
+.fc-body,
+.fc-day,
+.fc-day-number,
+.fc-day-header,
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-row,
+.fc-bg {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    border-color: #E2E8F0 !important;
 }
 
-/* 7. PRESERVAR SEMAFOROS DE ESTADO Y PRIORIDAD NATIVOS (Alta, Urgente, Sin Empezar) */
-.label-warning, .badge-warning { background-color: #f0ad4e !important; color: #ffffff !important; padding: 3px 8px !important; border-radius: 4px !important; }
-.label-danger, .badge-danger { background-color: #d9534f !important; color: #ffffff !important; padding: 3px 8px !important; border-radius: 4px !important; }
-.label-success, .badge-success { background-color: #5cb85c !important; color: #ffffff !important; padding: 3px 8px !important; border-radius: 4px !important; }
-.label-info, .badge-info { background-color: #5bc0de !important; color: #ffffff !important; padding: 3px 8px !important; border-radius: 4px !important; }
-.label-default, .badge-default { background-color: #777777 !important; color: #ffffff !important; padding: 3px 8px !important; border-radius: 4px !important; }
-
-/* ESTILOS LOGIN SOBRIO */
-.hrinser-brand-title {
-    font-family: 'Outfit', 'Inter', sans-serif !important;
-    font-size: 32px !important;
-    font-weight: 800 !important;
-    letter-spacing: 6px !important;
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-    margin: 0 auto !important;
-    padding: 10px 0 !important;
-    text-align: center !important;
-}
-
-#login.panel, #login {
-    background: rgba(15, 18, 28, 0.92) !important;
-    backdrop-filter: blur(25px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    border-radius: 20px !important;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8) !important;
-}
-
-#btn-login, #login #btn-login {
-    background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
-    border: none !important;
+.fc-day-header, .fc-day-number, .fc-head-container th, .fc-widget-header {
+    color: #0F172A !important;
     font-weight: 700 !important;
-    letter-spacing: 1.5px !important;
-    text-transform: uppercase !important;
-    padding: 12px 24px !important;
-    border-radius: 10px !important;
-    width: 100% !important;
 }
 
-body.login-page footer { display: none !important; }
+/* 8. BARRA MOSTRAR
