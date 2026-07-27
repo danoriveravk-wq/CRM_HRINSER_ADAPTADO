@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HRINSER CLEAN STATE - LOGIN ALIVE & CLEAN NATIVE DASHBOARD (NO PURPLE)
+   TEMA 14: ANTOFAGASTA MINERAL (AZUL FAENA & COBRE EXECUTIVE LIGHT)
    ========================================================================== */
 
 /* 1. Fondo VIVO y Palpitante ÚNICAMENTE en la pantalla de LOGIN */
@@ -21,86 +21,38 @@ body.login-page #main-container {
     }
 }
 
-/* 2. Fondo LISO y Limpio Corporativo para el DASHBOARD INTERNO (Al Ingresar) */
+/* 2. FONDO PRINCIPAL GRIS CALIZA FAENA (INTERIOR CRM) */
+html:not(.login-page),
 body:not(.login-page),
 body:not(.login-page) #main-container,
+body:not(.login-page) #main,
+body:not(.login-page) #content,
+body:not(.login-page) .container,
+body:not(.login-page) .container.content,
 #main-container:not(.login) {
-    background: #171923 !important;
+    background: #F2F4F7 !important;
+    background-color: #F2F4F7 !important;
     background-image: none !important;
     animation: none !important;
+    color: #0F172A !important;
 }
 
-/* Título HRINSER Sobrio en Blanco Puro Centrado */
-.hrinser-brand-title {
-    font-family: 'Outfit', 'Inter', 'Montserrat', sans-serif !important;
-    font-size: 32px !important;
-    font-weight: 800 !important;
-    letter-spacing: 6px !important;
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-    margin: 0 auto !important;
-    padding: 10px 0 !important;
-    text-align: center !important;
-    background: transparent !important;
-    border: none !important;
-    text-shadow: none !important;
-    width: 100% !important;
+/* 3. MENU LATERAL / HEADER EN AZUL ANTRACITA FAENA */
+#sidebar, .navbar, .header, #navbar, .navbar-vertical {
+    background-color: #1E293B !important;
+    border-color: #334155 !important;
 }
 
-/* Ocultar recuadros nativos */
-#login .panel-heading {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    text-align: center !important;
+#sidebar .nav-link, #sidebar a, .navbar-inverse .navbar-nav > li > a {
+    color: #94A3B8 !important;
 }
 
-/* Tarjeta Obsidiana Flotante */
-#login.panel,
-#login {
-    background: rgba(15, 18, 28, 0.92) !important;
-    background-color: rgba(15, 18, 28, 0.92) !important;
-    backdrop-filter: blur(25px) !important;
-    -webkit-backdrop-filter: blur(25px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    border-radius: 20px !important;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(99, 102, 241, 0.3) !important;
-}
-
-/* Botón Azul Corporativo */
-#btn-login,
-#login #btn-login {
-    background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%) !important;
-    border: none !important;
-    font-weight: 700 !important;
-    letter-spacing: 1.5px !important;
-    text-transform: uppercase !important;
-    padding: 12px 24px !important;
-    border-radius: 10px !important;
-    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4) !important;
-    width: 100% !important;
-}
-
-/* Ocultar footer en login */
-body.login-page footer {
-    display: none !important;
-}
-
-/* Forzar enlaces limpios en blanco/gris brillante sin morados */
-a, a:link, a:visited, a:focus, a:active,
-.cell a, .cell a:visited,
-.dashlet a, .dashlet a:visited,
-.panel a, .panel a:visited {
-    color: #E2E8F0 !important;
-    text-decoration: none !important;
-}
-
-a:hover, .cell a:hover, .dashlet a:hover {
+#sidebar .nav-link:hover, #sidebar a:hover, .navbar-inverse .navbar-nav > li > a:hover {
     color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* MARCA HRINSER MAS GRANDE EN EL ENCABEZADO SUPERIOR IZQUIERDO */
+/* 4. LOGO HRINSER EN COBRE INDUSTRIAL PULIDO */
 .navbar-logo-container .navbar-brand,
 .navbar-header .navbar-brand,
 #header .logo-container .navbar-brand {
@@ -123,6 +75,85 @@ a:hover, .cell a:hover, .dashlet a:hover {
     font-size: 25px !important;
     font-weight: 900 !important;
     letter-spacing: 5px !important;
-    color: #FFFFFF !important;
+    color: #D97706 !important;
     text-transform: uppercase !important;
 }
+
+/* 5. TARJETAS Y CAJAS BLANCO NIEVE PURO */
+.panel, .dashlet, .cell, .modal-content, .card {
+    background-color: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 10px !important;
+    color: #0F172A !important;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04) !important;
+}
+
+.panel-heading, .table th, .dashlet-header {
+    background-color: #FFFFFF !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    color: #0F172A !important;
+    font-weight: 700 !important;
+}
+
+.table td {
+    border-top: 1px solid #F1F5F9 !important;
+    color: #1E293B !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #F8FAFC !important;
+}
+
+/* 6. TEXTOS Y ENLACES - CERO SUBRAYADOS */
+a, a:link, a:visited, a:focus, a:active,
+.cell a, .dashlet a, .panel a {
+    color: #0F172A !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+a:hover, .cell a:hover, .dashlet a:hover {
+    color: #2563EB !important;
+    text-decoration: none !important;
+}
+
+/* 7. PRESERVAR SEMAFOROS DE ESTADO Y PRIORIDAD NATIVOS */
+.label-warning, .badge-warning { background-color: #f0ad4e !important; color: #ffffff !important; }
+.label-danger, .badge-danger { background-color: #d9534f !important; color: #ffffff !important; }
+.label-success, .badge-success { background-color: #5cb85c !important; color: #ffffff !important; }
+.label-info, .badge-info { background-color: #5bc0de !important; color: #ffffff !important; }
+.label-default, .badge-default { background-color: #777777 !important; color: #ffffff !important; }
+
+/* ESTILOS LOGIN SOBRIO */
+.hrinser-brand-title {
+    font-family: 'Outfit', 'Inter', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    letter-spacing: 6px !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    margin: 0 auto !important;
+    padding: 10px 0 !important;
+    text-align: center !important;
+}
+
+#login.panel, #login {
+    background: rgba(15, 18, 28, 0.92) !important;
+    backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8) !important;
+}
+
+#btn-login, #login #btn-login {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+    border: none !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 12px 24px !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+}
+
+body.login-page footer { display: none !important; }
