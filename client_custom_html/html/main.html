@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{applicationName}}</title>
+        <script type="application/json" data-name="loader-params">{{loaderParams}}</script>{{scriptsHtml}}
+        <link rel="stylesheet" href="{{basePath}}{{stylesheet}}?r={{cacheTimestamp}}" id='main-stylesheet'>{{additionalStyleSheetsHtml}}{{linksHtml}}
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="description" content="{{applicationDescription}}">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="alternate icon" href="{{basePath}}{{faviconAlternate}}?v=hrinser_h2" type="image/x-icon">
+        <link rel="icon" href="{{basePath}}{{favicon}}?v=hrinser_h2" type="{{faviconType}}">
+        <script nonce="{{nonce}}">
+            let loadedApp;
+
+            const run = app => {
+                {{runScript}}
+            };
+
+            const init = () => {
+                require('{{appClientClassName}}', App => {
+                    new App({
+                        id: '{{applicationId}}',
+                        useCache: {{useCache}},
+                    cacheTimestamp: {{cacheTimestamp}},
+                    appTimestamp: {{appTimestamp}},
+                    basePath: '{{basePath}}',
+                    apiUrl: '{{apiUrl}}',
+                    ajaxTimeout: {{ajaxTimeout}},
+                    internalModuleList: {{internalModuleList}},
+                    bundledModuleList: {{bundledModuleList}},
+                    theme: {{theme}},
+                }, app => {
+                        loadedApp = app;
+
+                        run(app);
+                    });
+                });
+            };
+
+            window.addEventListener('pageshow', event => {
+                if (event.persisted && loadedApp) {
+                    run(loadedApp);
+
+                    return;
+                }
+
+                init();
+            });
+        </script>
+    </head>
+    <body data-id="{{applicationId}}">
+        <div class="container content"></div>
+        <footer>
+            <p class="credit small">&copy; 2026
+            <a href="https://www.espocrm.com" title="Powered by EspoCRM" rel="noopener" target="_blank">EspoCRM, Inc.</a></p>
+        </footer>
+
+        <!-- SCRIPT GLOBAL PERMANENTE DE ROTACIÓN AUTOMÁTICA DE FOTOS DE LOGIN -->
+        <script nonce="{{nonce}}">
+            (function() {
+                'use strict';
+                let currentLoginSlide = 0;
+
+                function rotateLoginSlides() {
+                    if (!document.body || !document.body.classList.contains('login-page')) return;
+                    const hero = document.querySelector('.login-hero-panel');
+                    if (!hero) return;
+
+                    const slides = hero.querySelectorAll('.hero-bg');
+                    const dots = hero.querySelectorAll('.dot');
+                    if (!slides || slides.length < 2) return;
+
+                    slides[currentLoginSlide].classList.remove('active');
+                    if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.remove('active');
+
+                    currentLoginSlide = (currentLoginSlide + 1) % slides.length;
+
+                    slides[currentLoginSlide].classList.add('active');
+                    if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.add('active');
+                }
+
+                window.gotoLoginSlide = function(index) {
+                    const hero = document.querySelector('.login-hero-panel');
+                    if (!hero) return;
+                    const slides = hero.querySelectorAll('.hero-bg');
+                    const dots = hero.querySelectorAll('.dot');
+                    if (!slides || !slides[index]) return;
+
+                    slides.forEach(s => s.classList.remove('active'));
+                    dots.forEach(d => d.classList.remove('active'));
+
+                    currentLoginSlide = index;
+                    slides[currentLoginSlide].classList.add('active');
+                    if (dots[currentLoginSlide]) dots[currentLoginSlide].classList.add('active');
+                };
+
+                setInterval(rotateLoginSlides, 5000);
+            })();
+        </script>
+    </body>
+</html>
