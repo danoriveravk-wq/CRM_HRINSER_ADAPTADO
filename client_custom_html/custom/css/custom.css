@@ -1,18 +1,196 @@
 /* ==========================================================================
-   HOJA DE ESTILOS PERSONALIZADA HRINSER CRM - ESTADO OSCURO ORIGINAL LIMPIO
+   HOJA DE ESTILOS PERSONALIZADA HRINSER CRM - LOGIN SPLIT SCREEN REAL CON 3 FOTOS
    ========================================================================== */
 
-/* 1. Fondo VIVO únicamente en la pantalla de LOGIN */
+/* 1. LOGIN SPLIT SCREEN ESTILO COHERENTE OSCURO (#0F172A) */
 body.login-page,
-body.login-page #main-container {
-    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.5) 0%, rgba(30, 27, 75, 0.85) 50%, #060810 88%), #060810 !important;
-    animation: breathingGlow 8s ease-in-out infinite alternate !important;
+body.login-page #main-container,
+body.login-page .container.content {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100% !important;
+    background: #0F172A !important;
+    overflow: hidden !important;
 }
 
-@keyframes breathingGlow {
-    0% { background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.4) 0%, rgba(15, 23, 42, 0.92) 55%, #05070c 88%), #05070c !important; }
-    50% { background: radial-gradient(circle at 48% 42%, rgba(147, 51, 234, 0.6) 0%, rgba(30, 27, 75, 0.88) 60%, #080a14 90%), #080a14 !important; }
-    100% { background: radial-gradient(circle at 52% 58%, rgba(59, 130, 246, 0.55) 0%, rgba(17, 24, 39, 0.92) 52%, #05070c 88%), #05070c !important; }
+body.login-page footer {
+    display: none !important;
+}
+
+body.login-page .container-centering {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100% !important;
+}
+
+.split-login-wrapper {
+    display: flex !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.login-hero-panel {
+    flex: 1.3 !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 60px 70px !important;
+    color: #FFFFFF !important;
+    overflow: hidden !important;
+}
+
+.login-hero-panel .hero-bg {
+    position: absolute !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 0 !important;
+    transition: opacity 1.5s ease-in-out, transform 8s ease-out !important;
+    transform: scale(1.05) !important;
+    z-index: 0 !important;
+}
+
+.login-hero-panel .hero-bg.active {
+    opacity: 1 !important;
+    transform: scale(1.0) !important;
+}
+
+.login-hero-panel .hero-overlay {
+    position: absolute !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.55) 50%, rgba(9, 13, 22, 0.95) 100%) !important;
+    z-index: 1 !important;
+}
+
+.login-hero-panel .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.login-hero-panel .hero-brand {
+    font-family: 'Outfit', 'Inter', sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 900 !important;
+    letter-spacing: 6px !important;
+    color: #FFFFFF !important;
+    margin-bottom: 14px !important;
+}
+
+.login-hero-panel .hero-desc {
+    font-size: 19px !important;
+    color: #E2E8F0 !important;
+    max-width: 500px !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+}
+
+.login-hero-panel .hero-footer {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.login-hero-panel .hero-copy {
+    font-size: 13px !important;
+    color: #94A3B8 !important;
+}
+
+.login-hero-panel .slide-dots {
+    display: flex !important;
+    gap: 8px !important;
+}
+
+.login-hero-panel .dot {
+    width: 28px !important;
+    height: 4px !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 2px !important;
+    transition: all 0.4s ease !important;
+    cursor: pointer !important;
+}
+
+.login-hero-panel .dot.active {
+    background: #D97706 !important;
+    width: 44px !important;
+}
+
+/* FORM PANEL DERECHO OSCURO COHERENTE */
+.login-form-panel {
+    width: 480px !important;
+    background: #0F172A !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 40px !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.5) !important;
+    z-index: 10 !important;
+}
+
+.login-form-panel #login.panel {
+    width: 100% !important;
+    max-width: 350px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.login-welcome-title {
+    font-family: 'Outfit', 'Inter', sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    color: #FFFFFF !important;
+    margin-bottom: 4px !important;
+}
+
+.login-welcome-subtitle {
+    font-size: 13px !important;
+    color: #94A3B8 !important;
+}
+
+.login-form-panel label {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #CBD5E1 !important;
+}
+
+.login-form-panel input.form-control {
+    background: #1E293B !important;
+    border: 1px solid #334155 !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    padding: 12px 14px !important;
+    height: auto !important;
+}
+
+.login-form-panel input.form-control:focus {
+    border-color: #D97706 !important;
+    background: #0F172A !important;
+}
+
+.login-form-panel #btn-login {
+    background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    font-size: 13px !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 14px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    width: 100% !important;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4) !important;
 }
 
 /* 2. FONDO PRINCIPAL OSCURO LIMPIO (#171923) INTERIOR CRM */
@@ -70,37 +248,3 @@ a:hover, .cell a:hover, .dashlet a:hover {
     color: #60A5FA !important;
     text-decoration: none !important;
 }
-
-/* LOGIN SOBRIO */
-.hrinser-brand-title {
-    font-family: 'Outfit', 'Inter', sans-serif !important;
-    font-size: 32px !important;
-    font-weight: 800 !important;
-    letter-spacing: 6px !important;
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-    margin: 0 auto !important;
-    padding: 10px 0 !important;
-    text-align: center !important;
-}
-
-#login.panel, #login {
-    background: rgba(15, 18, 28, 0.92) !important;
-    backdrop-filter: blur(25px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    border-radius: 20px !important;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8) !important;
-}
-
-#btn-login, #login #btn-login {
-    background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
-    border: none !important;
-    font-weight: 700 !important;
-    letter-spacing: 1.5px !important;
-    text-transform: uppercase !important;
-    padding: 12px 24px !important;
-    border-radius: 10px !important;
-    width: 100% !important;
-}
-
-body.login-page footer { display: none !important; }
