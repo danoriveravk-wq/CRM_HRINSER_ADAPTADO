@@ -234,7 +234,7 @@ CREATE TABLE `action_history_record` (
   KEY `IDX_USER_ID` (`user_id`),
   KEY `IDX_AUTH_TOKEN_ID` (`auth_token_id`),
   KEY `IDX_AUTH_LOG_RECORD_ID` (`auth_log_record_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -294,7 +294,42 @@ INSERT INTO `action_history_record` VALUES
 ('6a6470b2b4d68286d',0,47,'Opportunity',NULL,'update','2026-07-25 08:15:46','172.21.0.1','opp_0000000000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901'),
 ('6a6470ef6ca9a4292',0,48,'Task',NULL,'update','2026-07-25 08:16:47','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901'),
 ('6a6470f0ba01f4367',0,49,'Task',NULL,'update','2026-07-25 08:16:48','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901'),
-('6a6470fa5c841214b',0,50,'Task',NULL,'read','2026-07-25 08:16:58','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901');
+('6a6470fa5c841214b',0,50,'Task',NULL,'read','2026-07-25 08:16:58','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a644cab750c340f4','6a644cab756f2c901'),
+('6a647eb2150125c72',0,51,'Case',NULL,'update','2026-07-25 09:15:30','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647eb2f33d4f1a3',0,52,'Case',NULL,'update','2026-07-25 09:15:30','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f4ca8baa92e5',0,53,'Case',NULL,'update','2026-07-25 09:18:04','172.21.0.1','case_000000000001','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f4dc401f2c30',0,54,'Case',NULL,'update','2026-07-25 09:18:05','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f52dd7669c7c',0,55,'Case',NULL,'update','2026-07-25 09:18:10','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f54138a766e3',0,56,'Case',NULL,'update','2026-07-25 09:18:12','172.21.0.1','case_000000000001','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a647f54d54ac75f9',0,57,'Case',NULL,'update','2026-07-25 09:18:12','172.21.0.1','case_000000000001','6a644c0d1b6a80478','6a647d7c8933cc401','6a647d7c8a7584170'),
+('6a651247c2159b73c',0,58,'Opportunity',NULL,'update','2026-07-25 19:45:11','172.21.0.1','opp_qualific_002','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a651c66b0b81a91d',0,59,'Case',NULL,'update','2026-07-25 20:28:22','172.21.0.1','tck_0000000000007','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a651c6989dce0618',0,60,'Case',NULL,'update','2026-07-25 20:28:25','172.21.0.1','tck_0000000000003','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6521ad2d89a9d47',0,61,'KnowledgeBaseArticle',NULL,'read','2026-07-25 20:50:53','172.21.0.1','kb_art_000000001','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a65244c0dece7b6a',0,62,'Task',NULL,'update','2026-07-25 21:02:04','172.21.0.1','tsk_real_000001','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6524677ec60f8ec',0,63,'Task',NULL,'update','2026-07-25 21:02:31','172.21.0.1','task_adm_0000002','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a652476ea87288a5',0,64,'Task',NULL,'read','2026-07-25 21:02:46','172.21.0.1','task_adm_0000002','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6524925fcdb06d9',0,65,'Note',NULL,'create','2026-07-25 21:03:14','172.21.0.1','6a6524925b28670fe','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a65249f9ddf8bcce',0,66,'Task',NULL,'read','2026-07-25 21:03:27','172.21.0.1','task_cal_0000010','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6524b067db310f5',0,67,'Task',NULL,'read','2026-07-25 21:03:44','172.21.0.1','tsk_real_000002','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6524fc5a2792c58',0,68,'Task',NULL,'update','2026-07-25 21:05:00','172.21.0.1','task_adm_0000001','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a65254d99ecf2403',0,69,'Case',NULL,'update','2026-07-25 21:06:21','172.21.0.1','case_000000000002','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a65254e62343088c',0,70,'Case',NULL,'read','2026-07-25 21:06:22','172.21.0.1','tck_0000000000004','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a65256daea24f130',0,71,'KnowledgeBaseArticle',NULL,'read','2026-07-25 21:06:53','172.21.0.1','kb_art_000000001','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a652593c4bf01027',0,72,'KnowledgeBaseArticle',NULL,'read','2026-07-25 21:07:31','172.21.0.1','kb_art_000000003','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a65259b33f51700d',0,73,'KnowledgeBaseArticle',NULL,'read','2026-07-25 21:07:39','172.21.0.1','kb_art_000000006','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6525b4e9a34daf0',0,74,'Campaign',NULL,'read','2026-07-25 21:08:04','172.21.0.1','cmp_0000000000005','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6525c60d0901d15',0,75,'Campaign',NULL,'read','2026-07-25 21:08:22','172.21.0.1','cmp_0000000000004','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6525f05a7205142',0,76,'Campaign',NULL,'read','2026-07-25 21:09:04','172.21.0.1','cmp_0000000000005','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a652641924266c44',0,77,'Contact',NULL,'read','2026-07-25 21:10:25','172.21.0.1','con_vanessa_00002','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a65266a556ca79c4',0,78,'Lead',NULL,'read','2026-07-25 21:11:06','172.21.0.1','lead_ded_00000006','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a652683b45eb6dc9',0,79,'Opportunity',NULL,'read','2026-07-25 21:11:31','172.21.0.1','opp_0000000000001','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6526b1241c0dc22',0,80,'Opportunity',NULL,'read','2026-07-25 21:12:17','172.21.0.1','opp_0000000000005','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6526eee76e983f3',0,81,'Call',NULL,'read','2026-07-25 21:13:18','172.21.0.1','call_cal_0000008','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6528517a292634e',0,82,'Attachment',NULL,'create','2026-07-25 21:19:13','172.21.0.1','6a652851765a31731','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a652852e42e83bb0',0,83,'Document',NULL,'create','2026-07-25 21:19:14','172.21.0.1','6a652852e212d51a9','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a65285486b6251a7',0,84,'Document',NULL,'read','2026-07-25 21:19:16','172.21.0.1','6a652852e212d51a9','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b'),
+('6a6528ea187b6dbd4',0,85,'WorkingTimeCalendar',NULL,'read','2026-07-25 21:21:46','172.21.0.1','wtc_0000000000001','6a644c0d1b6a80478','6a6480fb56f5c5ace','6a6480fb58ebefc8b');
 /*!40000 ALTER TABLE `action_history_record` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -481,6 +516,8 @@ CREATE TABLE `attachment` (
 SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `attachment` WRITE;
 /*!40000 ALTER TABLE `attachment` DISABLE KEYS */;
+INSERT INTO `attachment` VALUES
+('6a652851765a31731','Validacion_en_Chile_de_la_Escala_de_Sobrecarga_del.pdf',0,'application/pdf',74096,'file',0,'2026-07-25 21:19:13','2026-07-25 21:19:14','Attachment','EspoUploadDir',NULL,0,NULL,NULL,'6a652852e212d51a9','Document',NULL,'6a644c0d1b6a80478');
 /*!40000 ALTER TABLE `attachment` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -534,7 +571,24 @@ INSERT INTO `auth_log_record` VALUES
 ('6a644c7074fb2bf84',0,'admin','172.21.0.1','2026-07-25 05:41:04',1,'CREDENTIALS',1784958064.2502,'http://localhost/api/v1/App/user','GET','Espo',NULL,NULL,NULL),
 ('6a644cab756f2c901',0,'admin','172.21.0.1','2026-07-25 05:42:03',0,NULL,1784958123.0895,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a644cab750c340f4'),
 ('6a645e288caf990b1',0,'vanessa','127.0.0.1','2026-07-25 06:56:40',0,NULL,1784962600.3369,'http://localhost/api/v1/App/user','GET','Espo',NULL,'usr_vanessa_0001',NULL),
-('6a64773cd789e24ad',0,'admin','172.21.0.1','2026-07-25 08:43:40',0,NULL,1784969020.6472,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a64773cd67329194');
+('6a64773cd789e24ad',0,'admin','172.21.0.1','2026-07-25 08:43:40',0,NULL,1784969020.6472,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a64773cd67329194'),
+('6a6477f550e9a3583',0,'admin','172.21.0.1','2026-07-25 08:46:45',0,NULL,1784969205.0944,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6477f54f2c2f8bf'),
+('6a6479b1d8e80e3c2',0,'admin','172.21.0.1','2026-07-25 08:54:09',0,NULL,1784969649.655,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6479b1d71e8c2f9'),
+('6a6479ee4c0b1aa4d',0,'admin','172.21.0.1','2026-07-25 08:55:10',0,NULL,1784969710.0751,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6479ee4a613ed0e'),
+('6a647a7957903d9b5',0,'admin','172.21.0.1','2026-07-25 08:57:29',0,NULL,1784969849.1287,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647a7955d589e6a'),
+('6a647b11439bb8fc8',0,'admin','172.21.0.1','2026-07-25 09:00:01',0,NULL,1784970001.035,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647b11432ae302c'),
+('6a647b915351160e3',0,'admin','172.21.0.1','2026-07-25 09:02:09',0,NULL,1784970129.1064,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647b9151a41381f'),
+('6a647bda9f0434c77',0,'admin','172.21.0.1','2026-07-25 09:03:22',0,NULL,1784970202.4178,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647bda9d493fde2'),
+('6a647c965d23a71ac',0,'admin','172.21.0.1','2026-07-25 09:06:30',0,NULL,1784970389.917,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647c96592b307ec'),
+('6a647d7c8a7584170',0,'admin','172.21.0.1','2026-07-25 09:10:20',0,NULL,1784970620.3059,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a647d7c8933cc401'),
+('6a6480fb58ebefc8b',0,'admin','172.21.0.1','2026-07-25 09:25:15',0,NULL,1784971515.0609,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6480fb56f5c5ace'),
+('6a652a500fef5e6cd',0,'admin','172.21.0.1','2026-07-25 21:27:44',0,NULL,1785014863.8298,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a652a500f8fa7f54'),
+('6a652aa66602d5507',0,'admin','172.21.0.1','2026-07-25 21:29:10',0,NULL,1785014950.1868,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a652aa6644a47d7c'),
+('6a6537c601dc49de9',0,'admin','172.21.0.1','2026-07-25 22:25:10',0,NULL,1785018309.5694,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6537c600b9be5b6'),
+('6a65388f25136c8e5',0,'admin','172.21.0.1','2026-07-25 22:28:31',0,NULL,1785018510.7563,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a65388f2341fefba'),
+('6a6539c2707020e66',0,'admin','172.21.0.1','2026-07-25 22:33:38',0,NULL,1785018818.0702,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a6539c26eb7f499c'),
+('6a66d477a889ebaf0',0,'admin','172.21.0.1','2026-07-27 03:45:59',0,NULL,1785123959.3761,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a66d477a7c31aab9'),
+('6a66ee730ceba6b93',0,'admin','172.21.0.1','2026-07-27 05:36:51',0,NULL,1785130610.7725,'http://localhost/api/v1/App/user','GET','Espo',NULL,'6a644c0d1b6a80478','6a66ee730b4080fae');
 /*!40000 ALTER TABLE `auth_log_record` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -578,7 +632,24 @@ LOCK TABLES `auth_token` WRITE;
 /*!40000 ALTER TABLE `auth_token` DISABLE KEYS */;
 INSERT INTO `auth_token` VALUES
 ('6a644cab750c340f4',0,'238c7402cfae85f619f09fb97c85579b',NULL,'1b712cda4e05b3d0601a8c098b5f914e','172.21.0.1',0,1,'2026-07-25 08:40:10','2026-07-25 05:42:03','2026-07-25 08:40:10','6a644c0d1b6a80478',NULL),
-('6a64773cd67329194',0,'8de6970af1314d6c4d1c12065e6fe8de',NULL,'1d614073f4ecab8b1a725abccc70e137','172.21.0.1',0,1,'2026-07-25 08:43:44','2026-07-25 08:43:40','2026-07-25 08:43:44','6a644c0d1b6a80478',NULL);
+('6a64773cd67329194',0,'8de6970af1314d6c4d1c12065e6fe8de',NULL,'1d614073f4ecab8b1a725abccc70e137','172.21.0.1',0,1,'2026-07-25 08:43:44','2026-07-25 08:43:40','2026-07-25 08:43:44','6a644c0d1b6a80478',NULL),
+('6a6477f54f2c2f8bf',0,'a14ad1a7386a0a4fcae1529ff437ffba',NULL,'23ba7cb66bc8371984d9497b62381c61','172.21.0.1',0,1,'2026-07-25 08:46:49','2026-07-25 08:46:45','2026-07-25 08:46:49','6a644c0d1b6a80478',NULL),
+('6a6479b1d71e8c2f9',0,'9fea6d5ab0de19e36bb73e28a231e873',NULL,'eda1ddbc518079a305406eef280bd07b','172.21.0.1',0,1,'2026-07-25 08:54:37','2026-07-25 08:54:09','2026-07-25 08:54:37','6a644c0d1b6a80478',NULL),
+('6a6479ee4a613ed0e',0,'f38ea04fa159d4332ce5ff11ec9d4822',NULL,'93eb3b055203227fae2413a16ba2db36','172.21.0.1',0,1,'2026-07-25 08:56:42','2026-07-25 08:55:10','2026-07-25 08:56:42','6a644c0d1b6a80478',NULL),
+('6a647a7955d589e6a',0,'23d89537bc34aee0b1ac607a8194b8f9',NULL,'886e2003b8133c718f80fee75c841078','172.21.0.1',0,1,'2026-07-25 08:58:29','2026-07-25 08:57:29','2026-07-25 08:58:29','6a644c0d1b6a80478',NULL),
+('6a647b11432ae302c',0,'c66b82d004e9e1347819dc99cae78af9',NULL,'d500105d5d32858f90b3a53104cbb376','172.21.0.1',0,1,'2026-07-25 09:00:03','2026-07-25 09:00:01','2026-07-25 09:00:03','6a644c0d1b6a80478',NULL),
+('6a647b9151a41381f',0,'0fa6d9db8c31cab308bee9a8ff426279',NULL,'46ce68dd639025afc0e437676606164c','172.21.0.1',0,1,'2026-07-25 09:02:31','2026-07-25 09:02:09','2026-07-25 09:02:31','6a644c0d1b6a80478',NULL),
+('6a647bda9d493fde2',0,'7040885e812984bf0e0d07de08a65481',NULL,'995e9c326b6f2304194ba03d70f17879','172.21.0.1',0,1,'2026-07-25 09:04:14','2026-07-25 09:03:22','2026-07-25 09:04:14','6a644c0d1b6a80478',NULL),
+('6a647c96592b307ec',0,'804c9029b705434d6fa1189b6bf8ada8',NULL,'366fd0bb2495442688af65b5bcd8f995','172.21.0.1',0,1,'2026-07-25 09:10:17','2026-07-25 09:06:30','2026-07-25 09:10:17','6a644c0d1b6a80478',NULL),
+('6a647d7c8933cc401',0,'9ea57024b25ad48a90c37b550eea1f14',NULL,'9b7d510886393a876a20e5544fc90fcc','172.21.0.1',0,1,'2026-07-25 09:18:38','2026-07-25 09:10:20','2026-07-25 09:18:38','6a644c0d1b6a80478',NULL),
+('6a6480fb56f5c5ace',0,'03ac06238fdf29abd28cdcccbe574c53',NULL,'a22a5550963dea6e3947313d6834917b','172.21.0.1',0,1,'2026-07-25 21:27:39','2026-07-25 09:25:15','2026-07-25 21:27:39','6a644c0d1b6a80478',NULL),
+('6a652a500f8fa7f54',0,'135f9419b9a7b30f1323686ac9bdd62b',NULL,'9ad0691bc7c5d55657eea8fc18cdf7a4','172.21.0.1',0,1,'2026-07-25 21:29:04','2026-07-25 21:27:44','2026-07-25 21:29:04','6a644c0d1b6a80478',NULL),
+('6a652aa6644a47d7c',0,'d0ccd82d01d724fe1d07cf7f389fee23',NULL,'34d5f79d5298b44ac79325f16050f9a0','172.21.0.1',0,1,'2026-07-25 21:29:28','2026-07-25 21:29:10','2026-07-25 21:29:28','6a644c0d1b6a80478',NULL),
+('6a6537c600b9be5b6',0,'7712a432249fa8a20dbb96507b200fa4',NULL,'932b5bce218770324629288b1c86223f','172.21.0.1',0,1,'2026-07-25 22:26:15','2026-07-25 22:25:10','2026-07-25 22:26:15','6a644c0d1b6a80478',NULL),
+('6a65388f2341fefba',0,'8979cfaffb1e48e20cf67ec2f49acc01',NULL,'670b2c46c5ca201d7e367e05cce2dd50','172.21.0.1',0,1,'2026-07-25 22:33:18','2026-07-25 22:28:31','2026-07-25 22:33:18','6a644c0d1b6a80478',NULL),
+('6a6539c26eb7f499c',0,'f09d9719e72e750208ef2c27d3c4d0d6',NULL,'44eeb01b82097b1f9b6f8958687357f4','172.21.0.1',0,1,'2026-07-25 22:39:15','2026-07-25 22:33:38','2026-07-25 22:39:15','6a644c0d1b6a80478',NULL),
+('6a66d477a7c31aab9',0,'f61d9acdf6f80db8f6a936de4076e651',NULL,'1d4cb3f9feed8556a7c9f95455f9a5f2','172.21.0.1',0,1,'2026-07-27 05:36:06','2026-07-27 03:45:59','2026-07-27 05:36:06','6a644c0d1b6a80478',NULL),
+('6a66ee730b4080fae',0,'4f1f13bbaf341c4cf206d83b0f21e231',NULL,'b5399dca6872cca25fee2d6877e9f40c','172.21.0.1',1,1,'2026-07-27 05:48:36','2026-07-27 05:36:51','2026-07-27 05:48:36','6a644c0d1b6a80478',NULL);
 /*!40000 ALTER TABLE `auth_token` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -869,6 +940,12 @@ CREATE TABLE `campaign` (
 SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `campaign` WRITE;
 /*!40000 ALTER TABLE `campaign` DISABLE KEYS */;
+INSERT INTO `campaign` VALUES
+('cmp_0000000000001','Lanzamiento Servicios Acreditación Minera Q2',0,'Completed','Email','2026-04-01','2026-04-30','Campaña inaugural de prospección B2B para contratistas mineros en Antofagasta y Calama.','2026-04-01 09:00:00',NULL,3000,1,'USD',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL,NULL),
+('cmp_0000000000002','Webinar Ley 20.123 & Gestión de Subcontratistas',0,'Completed','Web','2026-05-10','2026-05-31','Seminario online sobre responsabilidad solidaria y fiscalización DT para gerentes de SSO.','2026-05-10 10:00:00',NULL,2000,1,'USD',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL,NULL),
+('cmp_0000000000003','Prospección Proveedores Codelco y BHP',0,'Completed','Mail','2026-06-01','2026-06-30','Contacto directo con empresas contratistas de mantenimiento y transporte de carga pesada.','2026-06-01 08:30:00',NULL,4500,1,'USD',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL,NULL),
+('cmp_0000000000004','Campaña Auditorías Expres F30-1 Julio',0,'Active','Email','2026-07-01','2026-07-31','Promoción de servicios de certificación y auditoría acelerada de carpetas previsionales.','2026-07-01 09:15:00',NULL,3500,1,'USD',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL,NULL),
+('cmp_0000000000005','Lanzamiento Portal Acreditación IA Q3',0,'Planning','Banner','2026-08-01','2026-08-31','Posicionamiento del nuevo portal unificado con validación automatizada de pases faena.','2026-07-20 11:00:00',NULL,6000,1,'USD',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `campaign` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -1063,7 +1140,7 @@ CREATE TABLE `case` (
   KEY `IDX_MODIFIED_BY_ID` (`modified_by_id`),
   KEY `IDX_ASSIGNED_USER_ID` (`assigned_user_id`),
   FULLTEXT KEY `IDX_SYSTEM_FULL_TEXT_SEARCH` (`name`,`description`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1075,8 +1152,17 @@ LOCK TABLES `case` WRITE;
 /*!40000 ALTER TABLE `case` DISABLE KEYS */;
 INSERT INTO `case` VALUES
 ('6a644e168ef1a1ef2','q',1,1,'New','Normal',NULL,NULL,0,'2026-07-25 05:48:06','2026-07-25 06:08:07','2026-07-25 05:48:06',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478','6a644c0d1b6a80478',1),
-('case_000000000001','Revisión pase de ingreso conductores turno A - División El Teniente',0,2,'In Process','High',NULL,NULL,0,'2026-07-25 06:23:46',NULL,NULL,'acc_codelco_00001',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
-('case_000000000002','Auditoría cotizaciones previsionales F30-1 contratista Sigdo Koppers',0,3,'Closed','Normal',NULL,NULL,0,'2026-07-25 06:23:46',NULL,NULL,'acc_sk_0000000004',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0);
+('case_000000000001','Revisión pase de ingreso conductores turno A - División El Teniente',0,2,'Duplicate','High',NULL,NULL,0,'2026-07-25 06:23:46','2026-07-25 09:18:12','2026-07-25 09:18:12','acc_codelco_00001',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',3),
+('case_000000000002','Auditoría cotizaciones previsionales F30-1 contratista Sigdo Koppers',0,3,'Assigned','Normal',NULL,NULL,0,'2026-07-25 06:23:46','2026-07-25 21:06:21','2026-07-25 21:06:21','acc_sk_0000000004',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',5),
+('tck_0000000000001','Solicitud credenciales de acceso faena Escondida - Turno C',0,101,'New','High',NULL,'Revisión urgente de pases de ingreso para 15 trabajadores turno C BHP Billiton.',0,'2026-07-25 20:28:13',NULL,NULL,'acc_bhp_000000002',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
+('tck_0000000000002','Inconsistencia exámenes preocupacionales Echeverría',0,102,'New','Urgent',NULL,'Diferencia en fechas de vencimiento de octavario minero para personal de montaje.',0,'2026-07-25 20:28:13',NULL,NULL,'acc_vial_00000005',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
+('tck_0000000000003','Regularización contrato de trabajo y anexo Ley 20.123',0,103,'Duplicate','Normal',NULL,'Actualización de cláusulas de subcontratación según fiscalización DT.',0,'2026-07-25 20:28:13','2026-07-25 20:28:25','2026-07-25 20:28:25','acc_codelco_00001',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',1),
+('tck_0000000000004','Acreditación maquinaria pesada Komatsu - Chuquicamata',0,104,'Assigned','High',NULL,'Validación de revisiones técnicas y permisos de circulación para 4 camiones tolva.',0,'2026-07-25 20:28:13',NULL,NULL,'acc_codelco_00001',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
+('tck_0000000000005','Falta Certificado F30-1 mes de Junio - Subcontratista Valko',0,105,'Pending','Urgent',NULL,'Se requiere certificado emitido por Dirección del Trabajo para liberación de pago.',0,'2026-07-25 20:28:13',NULL,NULL,'acc_sk_0000000004',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
+('tck_0000000000006','Aclaración observaciones Mutual de Seguridad - Collahuasi',0,106,'Pending','Normal',NULL,'Respuesta a informe de hallazgos en inspección de instalaciones de faena.',0,'2026-07-25 20:28:13',NULL,NULL,'acc_anglo_0000003',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
+('tck_0000000000007','Acreditación urgente choferes camiones aljibe - Los Bronces',0,107,'Pending','High',NULL,'Pases aprobados e ingresados al sistema corporativo de Anglo American.',0,'2026-07-25 20:28:13','2026-07-25 20:28:22','2026-07-25 20:28:22','acc_anglo_0000003',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',1),
+('tck_0000000000008','Validación EPP y certificación arneses - Codelco Andina',0,108,'Closed','Normal',NULL,'Certificados de fábrica recepcionados y archivados en carpeta de faena.',0,'2026-07-25 20:28:13',NULL,NULL,'acc_codelco_00001',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
+('tck_0000000000009','Pase de ingreso rechazado por examen psicotécnico no vigente',0,109,'Rejected','Normal',NULL,'Examen psico-sensotécnico vencido hace 5 días. Requiere reagendamiento.',0,'2026-07-25 20:28:13',NULL,NULL,'acc_bhp_000000002',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0);
 /*!40000 ALTER TABLE `case` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -1509,6 +1595,8 @@ CREATE TABLE `document` (
 SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `document` WRITE;
 /*!40000 ALTER TABLE `document` DISABLE KEYS */;
+INSERT INTO `document` VALUES
+('6a652852e212d51a9','Validacion_en_Chile_de_la_Escala_de_Sobrecarga_del.pdf',0,'Active',NULL,'2026-07-25',NULL,NULL,'2026-07-25 21:19:14','2026-07-25 21:19:14','6a652851765a31731','6a644c0d1b6a80478',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `document` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -2294,7 +2382,7 @@ CREATE TABLE `entity_team` (
   UNIQUE KEY `UNIQ_ENTITY_ID_TEAM_ID_ENTITY_TYPE` (`entity_id`,`team_id`,`entity_type`),
   KEY `IDX_ENTITY_ID` (`entity_id`),
   KEY `IDX_TEAM_ID` (`team_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=193 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2387,7 +2475,59 @@ INSERT INTO `entity_team` VALUES
 (109,'meet_cal_0000015','team_acred_00001','Meeting',0),
 (117,'call_cal_0000002','team_acred_00001','Call',0),
 (118,'call_cal_0000003','team_acred_00001','Call',0),
-(119,'call_cal_0000007','team_acred_00001','Call',0);
+(119,'call_cal_0000007','team_acred_00001','Call',0),
+(124,'tck_0000000000001','team_acred_00001','Case',0),
+(125,'tck_0000000000002','team_acred_00001','Case',0),
+(126,'tck_0000000000003','team_acred_00001','Case',0),
+(127,'tck_0000000000004','team_acred_00001','Case',0),
+(128,'tck_0000000000005','team_acred_00001','Case',0),
+(129,'tck_0000000000006','team_acred_00001','Case',0),
+(130,'tck_0000000000007','team_acred_00001','Case',0),
+(131,'tck_0000000000008','team_acred_00001','Case',0),
+(132,'tck_0000000000009','team_acred_00001','Case',0),
+(139,'tck_0000000000005','team_cumpl_00002','Case',0),
+(140,'tck_0000000000003','team_cumpl_00002','Case',0),
+(141,'tck_0000000000008','team_cumpl_00002','Case',0),
+(142,'tck_0000000000006','team_ventas_00003','Case',0),
+(143,'kb_art_000000001','team_acred_00001','KnowledgeBaseArticle',0),
+(144,'kb_art_000000002','team_acred_00001','KnowledgeBaseArticle',0),
+(145,'kb_art_000000003','team_acred_00001','KnowledgeBaseArticle',0),
+(146,'kb_art_000000004','team_acred_00001','KnowledgeBaseArticle',0),
+(147,'kb_art_000000005','team_acred_00001','KnowledgeBaseArticle',0),
+(148,'kb_art_000000006','team_acred_00001','KnowledgeBaseArticle',0),
+(150,'kb_art_000000001','team_cumpl_00002','KnowledgeBaseArticle',0),
+(151,'kb_art_000000002','team_cumpl_00002','KnowledgeBaseArticle',0),
+(152,'kb_art_000000003','team_cumpl_00002','KnowledgeBaseArticle',0),
+(153,'kb_art_000000004','team_cumpl_00002','KnowledgeBaseArticle',0),
+(154,'kb_art_000000005','team_cumpl_00002','KnowledgeBaseArticle',0),
+(155,'kb_art_000000006','team_cumpl_00002','KnowledgeBaseArticle',0),
+(157,'kb_art_000000001','team_ventas_00003','KnowledgeBaseArticle',0),
+(158,'kb_art_000000002','team_ventas_00003','KnowledgeBaseArticle',0),
+(159,'kb_art_000000003','team_ventas_00003','KnowledgeBaseArticle',0),
+(160,'kb_art_000000004','team_ventas_00003','KnowledgeBaseArticle',0),
+(161,'kb_art_000000005','team_ventas_00003','KnowledgeBaseArticle',0),
+(162,'kb_art_000000006','team_ventas_00003','KnowledgeBaseArticle',0),
+(164,'cmp_0000000000001','team_ventas_00003','Campaign',0),
+(165,'cmp_0000000000002','team_ventas_00003','Campaign',0),
+(166,'cmp_0000000000003','team_ventas_00003','Campaign',0),
+(167,'cmp_0000000000004','team_ventas_00003','Campaign',0),
+(168,'cmp_0000000000005','team_ventas_00003','Campaign',0),
+(171,'cmp_0000000000001','team_acred_00001','Campaign',0),
+(172,'cmp_0000000000002','team_acred_00001','Campaign',0),
+(173,'cmp_0000000000003','team_acred_00001','Campaign',0),
+(174,'cmp_0000000000004','team_acred_00001','Campaign',0),
+(175,'cmp_0000000000005','team_acred_00001','Campaign',0),
+(178,'tgl_0000000000001','team_ventas_00003','TargetList',0),
+(179,'tgl_0000000000002','team_ventas_00003','TargetList',0),
+(180,'tgl_0000000000003','team_ventas_00003','TargetList',0),
+(181,'tgl_0000000000004','team_ventas_00003','TargetList',0),
+(182,'tgl_0000000000005','team_ventas_00003','TargetList',0),
+(185,'tgl_0000000000001','team_acred_00001','TargetList',0),
+(186,'tgl_0000000000002','team_acred_00001','TargetList',0),
+(187,'tgl_0000000000003','team_acred_00001','TargetList',0),
+(188,'tgl_0000000000004','team_acred_00001','TargetList',0),
+(189,'tgl_0000000000005','team_acred_00001','TargetList',0),
+(192,'6a652852e212d51a9','team_acred_00001','Document',0);
 /*!40000 ALTER TABLE `entity_team` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -2920,28 +3060,38 @@ SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `kanban_order` WRITE;
 /*!40000 ALTER TABLE `kanban_order` DISABLE KEYS */;
 INSERT INTO `kanban_order` VALUES
-('6a6457b6e7789a491',0,3,'Not Started','6a6457b6db626b4ee','Task','6a644c0d1b6a80478'),
+('6a6457b6e7789a491',0,4,'Not Started','6a6457b6db626b4ee','Task','6a644c0d1b6a80478'),
 ('6a6459d9a8568a082',0,2,'Prospecting','6a6459d9a1276da30','Opportunity','6a644c0d1b6a80478'),
-('6a645a030730150f2',0,2,'Qualification','6a645a02f3d8e3ccf','Opportunity','6a644c0d1b6a80478'),
+('6a645a030730150f2',0,1,'Qualification','6a645a02f3d8e3ccf','Opportunity','6a644c0d1b6a80478'),
 ('6a646f34aed04112e',0,0,'Prospecting','opp_prospect_001','Opportunity','6a644c0d1b6a80478'),
 ('6a646f34aed37a3f4',0,1,'Prospecting','opp_0000000000008','Opportunity','6a644c0d1b6a80478'),
-('6a646fb6408cb4065',0,0,'Qualification','opp_qualific_002','Opportunity','6a644c0d1b6a80478'),
-('6a646fb64092e721d',0,1,'Qualification','opp_0000000000001','Opportunity','6a644c0d1b6a80478'),
 ('6a647026329699a07',0,0,'Negotiation','opp_0000000000002','Opportunity','6a644c0d1b6a80478'),
 ('6a6470263299bd731',0,1,'Negotiation','opp_0000000000003','Opportunity','6a644c0d1b6a80478'),
-('6a64702799fcd2ab6',0,0,'Proposal','opp_0000000000005','Opportunity','6a644c0d1b6a80478'),
-('6a6470279a009d727',0,1,'Proposal','opp_0000000000007','Opportunity','6a644c0d1b6a80478'),
-('6a647063f2de14268',0,0,'Completed','task_000000000001','Task','6a644c0d1b6a80478'),
-('6a647063f2e3d4600',0,1,'Completed','tsk_real_000004','Task','6a644c0d1b6a80478'),
-('6a647063f2e81f0cc',0,2,'Completed','tsk_real_000005','Task','6a644c0d1b6a80478'),
-('6a647063f2eb51277',0,3,'Completed','tsk_real_000006','Task','6a644c0d1b6a80478'),
-('6a647063f2eefd3ef',0,4,'Completed','tsk_real_000007','Task','6a644c0d1b6a80478'),
-('6a6470ef720f8225a',0,0,'Started','task_adm_0000001','Task','6a644c0d1b6a80478'),
-('6a6470ef72132d04a',0,1,'Started','task_000000000002','Task','6a644c0d1b6a80478'),
-('6a6470ef721970961',0,3,'Started','tsk_real_000003','Task','6a644c0d1b6a80478'),
-('6a6470f0bf961fc25',0,0,'Not Started','task_adm_0000002','Task','6a644c0d1b6a80478'),
-('6a6470f0bf98c2cf7',0,1,'Not Started','tsk_real_000001','Task','6a644c0d1b6a80478'),
-('6a6470f0bf9ac34b0',0,2,'Not Started','tsk_real_000002','Task','6a644c0d1b6a80478');
+('6a651c66bf03c5d7f',0,0,'Pending','tck_0000000000006','Case','6a644c0d1b6a80478'),
+('6a651c66bf07b2398',0,1,'Pending','tck_0000000000005','Case','6a644c0d1b6a80478'),
+('6a651c66bf0a3b282',0,2,'Pending','tck_0000000000007','Case','6a644c0d1b6a80478'),
+('6a651c69904126b8b',0,0,'Duplicate','case_000000000001','Case','6a644c0d1b6a80478'),
+('6a651c69904478338',0,1,'Duplicate','tck_0000000000003','Case','6a644c0d1b6a80478'),
+('6a65241978ed057cd',0,0,'Proposal','opp_0000000000005','Opportunity','6a644c0d1b6a80478'),
+('6a65241978f07feff',0,1,'Proposal','opp_0000000000007','Opportunity','6a644c0d1b6a80478'),
+('6a65241978f2aae65',0,2,'Proposal','opp_qualific_002','Opportunity','6a644c0d1b6a80478'),
+('6a6524678462eda6b',0,1,'Started','task_000000000002','Task','6a644c0d1b6a80478'),
+('6a652467846638f0d',0,2,'Started','task_adm_0000002','Task','6a644c0d1b6a80478'),
+('6a65246784686c3fa',0,3,'Started','tsk_real_000001','Task','6a644c0d1b6a80478'),
+('6a652467846b1ae2e',0,4,'Started','tsk_real_000003','Task','6a644c0d1b6a80478'),
+('6a652467846d3e1ed',0,5,'Started','task_cal_0000002','Task','6a644c0d1b6a80478'),
+('6a6524fc60b6fb302',0,0,'Not Started','tsk_real_000002','Task','6a644c0d1b6a80478'),
+('6a6524fc60ba10300',0,1,'Not Started','task_cal_0000010','Task','6a644c0d1b6a80478'),
+('6a6524fc60bc4bb1d',0,2,'Not Started','task_adm_0000001','Task','6a644c0d1b6a80478'),
+('6a6524fc60be577b0',0,3,'Not Started','task_cal_0000009','Task','6a644c0d1b6a80478'),
+('6a65250112cc71bc3',0,0,'Completed','task_000000000001','Task','6a644c0d1b6a80478'),
+('6a65250112cf8b4d4',0,1,'Completed','tsk_real_000004','Task','6a644c0d1b6a80478'),
+('6a65250112d1cc194',0,2,'Completed','tsk_real_000005','Task','6a644c0d1b6a80478'),
+('6a65250112d3c0653',0,3,'Completed','tsk_real_000006','Task','6a644c0d1b6a80478'),
+('6a65250112d5def6e',0,4,'Completed','tsk_real_000007','Task','6a644c0d1b6a80478'),
+('6a65254da1ea44a64',0,0,'Assigned','tck_0000000000004','Case','6a644c0d1b6a80478'),
+('6a65254da1f0387ca',0,1,'Assigned','case_000000000002','Case','6a644c0d1b6a80478'),
+('6a652682dba7f3a0a',0,0,'Qualification','opp_0000000000001','Opportunity','6a644c0d1b6a80478');
 /*!40000 ALTER TABLE `kanban_order` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -2988,6 +3138,13 @@ CREATE TABLE `knowledge_base_article` (
 SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `knowledge_base_article` WRITE;
 /*!40000 ALTER TABLE `knowledge_base_article` DISABLE KEYS */;
+INSERT INTO `knowledge_base_article` VALUES
+('kb_art_000000001','Guía de Requisitos para Acreditación de Trabajadores en Codelco y BHP',0,'Published',NULL,'Article','2026-07-01',NULL,NULL,NULL,'2026-07-25 20:49:34',NULL,'<p>Esta guía establece la documentación obligatoria para solicitar el pase de ingreso a faenas mineras en Chile:</p><ul><li><strong>Examen Psico-sensotécnico y Octavario Minero:</strong> Vigencia máxima de 1 año otorgada por la Mutual o ACHS.</li><li><strong>Contrato de Trabajo:</strong> Firmado con anexo de faena específico según Ley 20.123.</li><li><strong>Certificado de Inducción Hombre Nuevo (DAS):</strong> Aprobado en la plataforma del mandante.</li><li><strong>EPP Certificado:</strong> Calzado de seguridad, casco con barbiquejo y lentes filtro UV.</li></ul>','Esta guía establece la documentación obligatoria para solicitar el pase de ingreso a faenas mineras en Chile: Examen Psico-sensotécnico y Octavario Minero, Contrato de Trabajo, Certificado DAS y EPP Certificado.',NULL,NULL,'6a644c0d1b6a80478',0),
+('kb_art_000000002','Protocolo de Emisión y Validación de Certificados F30 y F30-1 (Dirección del Trabajo)',0,'Published',NULL,'Article','2026-07-05',NULL,NULL,NULL,'2026-07-25 20:49:34',NULL,'<p>Procedimiento estandarizado para la obtención de certificados laborales ante la Dirección del Trabajo:</p><ol><li><strong>Certificado F30:</strong> Antecedentes laborales y previsionales de la empresa.</li><li><strong>Certificado F30-1:</strong> Cumplimiento de obligaciones laborales y previsionales por obra o faena específica.</li><li><strong>Plazo de presentación:</strong> Debe adjuntarse los primeros 10 días de cada mes para la liberación de estados de pago.</li></ol>','Procedimiento estandarizado para la obtención de certificados laborales F30 y F30-1 ante la Dirección del Trabajo para liberación de estados de pago.',NULL,NULL,'usr_francisc_002',0),
+('kb_art_000000003','Matriz de Cumplimiento Ley 20.123 de Subcontratación Minera',0,'Published',NULL,'Article','2026-07-10',NULL,NULL,NULL,'2026-07-25 20:49:34',NULL,'<p>Marco regulatorio sobre responsabilidad solidaria y subsidiaria de la empresa principal en la minería:</p><ul><li><strong>Derecho de Información:</strong> La empresa principal puede exigir comprobantes de pago de cotizaciones a contratistas.</li><li><strong>Derecho de Retención:</strong> Facultad de retener pagos si el subcontratista no acredita el cumplimiento laboral.</li><li><strong>Sistema de Gestión de Seguridad y Salud en el Trabajo (SGSST):</strong> Obligatorio para más de 50 trabajadores en obra.</li></ul>','Marco regulatorio sobre responsabilidad solidaria y subsidiaria de la empresa principal en la minería bajo la Ley 20.123.',NULL,NULL,'usr_carolina_005',0),
+('kb_art_000000004','Checklist de Documentación para Ingreso de Maquinaria Pesada a Faena',0,'Published',NULL,'Article','2026-07-12',NULL,NULL,NULL,'2026-07-25 20:49:34',NULL,'<p>Requisitos de homologación técnica para vehículos y maquinaria pesada (Komatsu, Caterpillar, Camiones Aljibe):</p><ul><li>Padrón de dominio del vehículo o contrato de leasing.</li><li>Revisión técnica y emisión de gases vigente al día.</li><li>Seguro obligatorio SOAP y Seguro de Responsabilidad Civil.</li><li>Checklist diario de pre-uso (luces, frenos, alarma de retroceso, pértiga y cortacorriente).</li></ul>','Requisitos de homologación técnica para vehículos y maquinaria pesada en faena minera.',NULL,NULL,'usr_rodrigo_0004',0),
+('kb_art_000000005','Procedimiento en caso de Accidentes del Trabajo o Enfermedades Profesionales (Ley 16.744)',0,'Published',NULL,'Article','2026-07-15',NULL,NULL,NULL,'2026-07-25 20:49:34',NULL,'<p>Protocolo de acción inmediata ante eventos de seguridad en faena:</p><ol><li><strong>Atención Médica Inmediata:</strong> Traslado al centro asistencial de la Mutual de Seguridad o ACHS más cercano.</li><li><strong>Emisión de DIAT:</strong> Declaración Individual de Accidente del Trabajo dentro de las 24 horas siguientes.</li><li><strong>Notificación al SERNAGEOMIN y Inspección del Trabajo:</strong> En caso de accidente grave o fatal.</li></ol>','Protocolo de acción inmediata ante accidentes del trabajo o enfermedades profesionales según la Ley 16.744.',NULL,NULL,'usr_vanessa_0001',0),
+('kb_art_000000006','Manual de Uso del Portal de Clientes y Contratistas HRINSER',0,'Published',NULL,'Article','2026-07-20',NULL,NULL,NULL,'2026-07-25 20:49:34',NULL,'<p>Instrucciones de uso del portal web unificado HRINSER para empresas contratistas:</p><ul><li>Carga masiva de carpetas de acreditación documental.</li><li>Monitoreo de estado de validación en tiempo real (Aprobado, Pendiente, Observado).</li><li>Descarga de reportes ejecutivos consolidado para estados de pago.</li></ul>','Instrucciones de uso del portal web unificado HRINSER para empresas contratistas.',NULL,NULL,'usr_carlos_00003',0);
 /*!40000 ALTER TABLE `knowledge_base_article` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -3770,7 +3927,7 @@ CREATE TABLE `note` (
   KEY `IDX_MODIFIED_BY_ID` (`modified_by_id`),
   KEY `IDX_SUPER_PARENT` (`super_parent_id`,`super_parent_type`),
   FULLTEXT KEY `IDX_SYSTEM_FULL_TEXT_SEARCH` (`post`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3802,6 +3959,21 @@ INSERT INTO `note` VALUES
 ('6a647063ecde7ccd5',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Completed\"}','Update',NULL,28,0,0,0,'2026-07-25 08:14:27','2026-07-25 08:14:27','tsk_real_000004','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
 ('6a6470ef6bcb9f6b2',0,NULL,'{\"fields\":[\"dateEnd\"],\"attributes\":{\"was\":{\"dateEnd\":null,\"dateEndDate\":\"2026-08-01\"},\"became\":{\"dateEnd\":\"2026-08-02 04:00:00\",\"dateEndDate\":\"2026-08-01\"}},\"value\":\"Started\"}','Update',NULL,29,0,0,0,'2026-07-25 08:16:47','2026-07-25 08:16:47','tsk_real_000002','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
 ('6a6470f0b90f37964',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Not Started\"}','Update',NULL,30,0,0,0,'2026-07-25 08:16:48','2026-07-25 08:16:48','tsk_real_000002','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647eb21106db2b1',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Pending\"}','Update',NULL,31,0,0,0,'2026-07-25 09:15:30','2026-07-25 09:15:30','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647eb2f1ea0a45c',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Assigned\"}','Update',NULL,32,0,0,0,'2026-07-25 09:15:30','2026-07-25 09:15:30','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f4ca5f7e8886',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Rejected\"}','Update',NULL,33,0,0,0,'2026-07-25 09:18:04','2026-07-25 09:18:04','case_000000000001','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f4dc2eedba0d',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Pending\"}','Update',NULL,34,0,0,0,'2026-07-25 09:18:05','2026-07-25 09:18:05','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f52dca0617da',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"New\"}','Update',NULL,35,0,0,0,'2026-07-25 09:18:10','2026-07-25 09:18:10','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f5412e21c85a',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Closed\"}','Update',NULL,36,0,0,0,'2026-07-25 09:18:12','2026-07-25 09:18:12','case_000000000001','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a647f54d4890f31f',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Duplicate\"}','Update',NULL,37,0,0,0,'2026-07-25 09:18:12','2026-07-25 09:18:12','case_000000000001','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a651247bfb160193',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Proposal\"}','Update',NULL,38,0,0,0,'2026-07-25 19:45:11','2026-07-25 19:45:11','opp_qualific_002','Opportunity',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a651c66ae5c88986',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Pending\"}','Update',NULL,39,0,0,0,'2026-07-25 20:28:22','2026-07-25 20:28:22','tck_0000000000007','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a651c69892cabcc3',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Duplicate\"}','Update',NULL,40,0,0,0,'2026-07-25 20:28:25','2026-07-25 20:28:25','tck_0000000000003','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a65244c0ad1e0e98',0,NULL,'{\"fields\":[\"dateEnd\"],\"attributes\":{\"was\":{\"dateEnd\":null,\"dateEndDate\":\"2026-07-30\"},\"became\":{\"dateEnd\":\"2026-07-31 04:00:00\",\"dateEndDate\":\"2026-07-30\"}},\"value\":\"Started\"}','Update',NULL,41,0,0,0,'2026-07-25 21:02:04','2026-07-25 21:02:04','tsk_real_000001','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a6524677d57e7c9f',0,NULL,'{\"fields\":[\"dateEnd\"],\"attributes\":{\"was\":{\"dateEnd\":null,\"dateEndDate\":\"2026-07-29\"},\"became\":{\"dateEnd\":\"2026-07-30 04:00:00\",\"dateEndDate\":\"2026-07-29\"}},\"value\":\"Started\"}','Update',NULL,42,0,0,0,'2026-07-25 21:02:31','2026-07-25 21:02:31','task_adm_0000002','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a6524925b28670fe',0,'recordar llevar timbre\n','{}','Post',NULL,43,0,0,0,'2026-07-25 21:03:14','2026-07-25 21:03:14','task_adm_0000002','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a6524fc59589d66b',0,NULL,'{\"fields\":[\"dateEnd\"],\"attributes\":{\"was\":{\"dateEnd\":null,\"dateEndDate\":\"2026-07-27\"},\"became\":{\"dateEnd\":\"2026-07-28 04:00:00\",\"dateEndDate\":\"2026-07-27\"}},\"value\":\"Not Started\"}','Update',NULL,44,0,0,0,'2026-07-25 21:05:00','2026-07-25 21:05:00','task_adm_0000001','Task',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
+('6a65254d97dff00b5',0,NULL,'{\"fields\":[],\"attributes\":{\"was\":{},\"became\":{}},\"value\":\"Assigned\"}','Update',NULL,45,0,0,0,'2026-07-25 21:06:21','2026-07-25 21:06:21','case_000000000002','Case',NULL,NULL,'6a644c0d1b6a80478',NULL,NULL,NULL),
 ('note_real_0000001',0,'Vanessa Galdames aprobó la carpeta de acreditación de subcontratistas Codelco El Teniente.',NULL,'Post',NULL,7,1,0,0,'2026-06-10 07:44:05',NULL,NULL,NULL,NULL,NULL,'usr_vanessa_0001',NULL,NULL,NULL),
 ('note_real_0000002',0,'Francisca Pirma emitió y validó el Certificado F30-1 de Sigdo Koppers Montajes Industriales.',NULL,'Post',NULL,8,1,0,0,'2026-06-25 07:44:05',NULL,NULL,NULL,NULL,NULL,'usr_francisc_002',NULL,NULL,NULL),
 ('note_real_0000003',0,'Carlos Mendoza presentó la propuesta comercial para el Servicio de Control de Acceso Los Bronces por $22.000.000 CLP.',NULL,'Post',NULL,9,1,0,0,'2026-07-05 07:44:05',NULL,NULL,NULL,NULL,NULL,'usr_carlos_00003',NULL,NULL,NULL),
@@ -4107,7 +4279,7 @@ INSERT INTO `opportunity` VALUES
 ('opp_0000000000008','Servicios de Verificación Contratistas Collahuasi',0,19000000,'Prospecting','Prospecting',10,NULL,'2026-08-05',NULL,'2026-07-01 12:00:00','2026-07-25 08:09:24','CLP','2026-07-25 08:09:24','acc_bhp_000000002',NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',1),
 ('opp_closedlost03','Servicio Auditoría Externa Minera Lomas Bayas',0,8000000,'Closed Lost',NULL,NULL,NULL,'2026-06-15',NULL,'2026-05-26 06:46:57',NULL,'CLP',NULL,'acc_vial_00000005',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
 ('opp_prospect_001','Acreditación Cargas Especiales Minera Centinela',0,11500000,'Prospecting',NULL,NULL,NULL,'2026-09-23',NULL,'2026-07-18 06:46:57',NULL,'CLP',NULL,'acc_bhp_000000002',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0),
-('opp_qualific_002','Auditoría Control Contratistas Albemarle Planta Salar',0,13000000,'Qualification',NULL,20,NULL,'2026-09-08',NULL,'2026-07-22 06:46:57','2026-07-25 08:15:37','CLP',NULL,'acc_sk_0000000004',NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',1);
+('opp_qualific_002','Auditoría Control Contratistas Albemarle Planta Salar',0,13000000,'Proposal','Proposal',50,NULL,'2026-09-08',NULL,'2026-07-22 06:46:57','2026-07-25 19:45:11','CLP','2026-07-25 19:45:11','acc_sk_0000000004',NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',2);
 /*!40000 ALTER TABLE `opportunity` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -4464,7 +4636,7 @@ SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `preferences` WRITE;
 /*!40000 ALTER TABLE `preferences` DISABLE KEYS */;
 INSERT INTO `preferences` VALUES
-('6a644c0d1b6a80478','{\"id\": \"6a644c0d1b6a80478\", \"weekStart\": 1, \"thousandSeparator\": \",\", \"decimalMark\": \".\", \"dashboardLayout\": [{\"name\": \"My Espo\", \"layout\": [{\"id\": \"d843158\", \"name\": \"Calendar\", \"x\": 2, \"y\": 0, \"width\": 2, \"height\": 2}, {\"id\": \"d369165\", \"name\": \"SalesByMonth\", \"x\": 2, \"y\": 2, \"width\": 2, \"height\": 2}, {\"id\": \"d296596\", \"name\": \"Records\", \"x\": 0, \"y\": 0, \"width\": 2, \"height\": 2}, {\"id\": \"default-activities\", \"name\": \"Activities\", \"x\": 0, \"y\": 2, \"width\": 2, \"height\": 4}, {\"id\": \"d117937\", \"name\": \"OpportunitiesByStage\", \"x\": 2, \"y\": 4, \"width\": 2, \"height\": 2}, {\"id\": \"d48159\", \"name\": \"SalesPipeline\", \"x\": 2, \"y\": 6, \"width\": 2, \"height\": 2}, {\"id\": \"default-stream\", \"name\": \"Stream\", \"x\": 0, \"y\": 6, \"width\": 2, \"height\": 4}]}], \"dashletsOptions\": {\"d117937\": {\"title\": \"Oportunidades por Etapa\", \"dateFilter\": \"currentYear\"}, \"default-activities\": {\"title\": \"Mis pr\\u00f3ximas actividades\", \"autorefreshInterval\": 0.5, \"displayRecords\": 10, \"enabledScopeList\": [\"Meeting\", \"Call\", \"Task\"], \"futureDays\": 60, \"includeShared\": false}, \"d843158\": {\"title\": \"Calendario\", \"autorefreshInterval\": 0.5, \"mode\": \"month\", \"enabledScopeList\": [\"Meeting\", \"Call\", \"Task\"], \"teamsIds\": [], \"teamsNames\": {}}, \"d296596\": {\"title\": \"Tareas\", \"autorefreshInterval\": 0, \"entityType\": \"Task\", \"displayRecords\": 10, \"primaryFilter\": \"all\", \"sortBy\": \"createdAt\", \"boolFilterList\": [], \"sortDirection\": \"desc\", \"expandedLayout\": {\"rows\": [[{\"name\": \"name\", \"link\": true, \"soft\": false, \"small\": false}]]}}, \"default-stream\": {\"title\": \"Historia\", \"displayRecords\": 10, \"autorefreshInterval\": 0.5, \"skipOwn\": false}}, \"exportDelimiter\": \",\", \"receiveAssignmentEmailNotifications\": true, \"receiveMentionEmailNotifications\": true, \"receiveStreamEmailNotifications\": true, \"assignmentNotificationsIgnoreEntityTypeList\": [], \"reactionNotifications\": true, \"reactionNotificationsNotFollowed\": false, \"notificationGrouping\": true, \"notificationSound\": false, \"defaultReminders\": [], \"defaultRemindersTask\": [], \"useCustomTabList\": false, \"addCustomTabs\": false, \"emailReplyToAllByDefault\": true, \"emailReplyForceHtml\": true, \"doNotFillAssignedUserIfNotRequired\": true, \"followEntityOnStreamPost\": true, \"followCreatedEntities\": false, \"followCreatedEntityTypeList\": [], \"followAsCollaborator\": true, \"emailUseExternalClient\": false, \"scopeColorsDisabled\": false, \"tabColorsDisabled\": false, \"textSearchStoringDisabled\": false, \"calendarSlotDuration\": null, \"calendarScrollHour\": null}');
+('6a644c0d1b6a80478','{\n    \"id\": \"6a644c0d1b6a80478\",\n    \"weekStart\": 1,\n    \"thousandSeparator\": \",\",\n    \"decimalMark\": \".\",\n    \"dashboardLayout\": [\n        {\n            \"name\": \"My Espo\",\n            \"layout\": [\n                {\n                    \"id\": \"d61320\",\n                    \"name\": \"Tasks\",\n                    \"x\": 0,\n                    \"y\": 0,\n                    \"width\": 2,\n                    \"height\": 2\n                },\n                {\n                    \"id\": \"d843158\",\n                    \"name\": \"Calendar\",\n                    \"x\": 2,\n                    \"y\": 0,\n                    \"width\": 2,\n                    \"height\": 2\n                },\n                {\n                    \"id\": \"d296596\",\n                    \"name\": \"Records\",\n                    \"x\": 0,\n                    \"y\": 3.75,\n                    \"width\": 2,\n                    \"height\": 2\n                },\n                {\n                    \"id\": \"d369165\",\n                    \"name\": \"SalesByMonth\",\n                    \"x\": 0,\n                    \"y\": 2,\n                    \"width\": 2,\n                    \"height\": 1.75\n                },\n                {\n                    \"id\": \"d117937\",\n                    \"name\": \"OpportunitiesByStage\",\n                    \"x\": 2,\n                    \"y\": 2,\n                    \"width\": 2,\n                    \"height\": 2\n                },\n                {\n                    \"id\": \"default-activities\",\n                    \"name\": \"Activities\",\n                    \"x\": 0,\n                    \"y\": 5.75,\n                    \"width\": 2,\n                    \"height\": 4\n                },\n                {\n                    \"id\": \"d48159\",\n                    \"name\": \"SalesPipeline\",\n                    \"x\": 2,\n                    \"y\": 4,\n                    \"width\": 2,\n                    \"height\": 2\n                },\n                {\n                    \"id\": \"default-stream\",\n                    \"name\": \"Stream\",\n                    \"x\": 0,\n                    \"y\": 9.75,\n                    \"width\": 2,\n                    \"height\": 4\n                }\n            ]\n        }\n    ],\n    \"dashletsOptions\": {\n        \"d117937\": {\n            \"title\": \"Oportunidades por Etapa\",\n            \"dateFilter\": \"currentYear\"\n        },\n        \"default-activities\": {\n            \"title\": \"Mis pr\\u00f3ximas actividades\",\n            \"autorefreshInterval\": 0.5,\n            \"displayRecords\": 10,\n            \"enabledScopeList\": [\n                \"Meeting\",\n                \"Call\",\n                \"Task\"\n            ],\n            \"futureDays\": 60,\n            \"includeShared\": false\n        },\n        \"d843158\": {\n            \"title\": \"Calendario\",\n            \"autorefreshInterval\": 0.5,\n            \"mode\": \"month\",\n            \"enabledScopeList\": [\n                \"Meeting\",\n                \"Call\",\n                \"Task\"\n            ],\n            \"teamsIds\": [],\n            \"teamsNames\": {}\n        },\n        \"d296596\": {\n            \"title\": \"Tareas\",\n            \"autorefreshInterval\": 0,\n            \"entityType\": \"Task\",\n            \"displayRecords\": 10,\n            \"primaryFilter\": \"all\",\n            \"sortBy\": \"createdAt\",\n            \"boolFilterList\": [],\n            \"sortDirection\": \"desc\",\n            \"expandedLayout\": {\n                \"rows\": [\n                    [\n                        {\n                            \"name\": \"name\",\n                            \"link\": true,\n                            \"soft\": false,\n                            \"small\": false\n                        }\n                    ]\n                ]\n            }\n        },\n        \"default-stream\": {\n            \"title\": \"Historia\",\n            \"displayRecords\": 10,\n            \"autorefreshInterval\": 0.5,\n            \"skipOwn\": false\n        }\n    },\n    \"exportDelimiter\": \",\",\n    \"receiveAssignmentEmailNotifications\": true,\n    \"receiveMentionEmailNotifications\": true,\n    \"receiveStreamEmailNotifications\": true,\n    \"assignmentNotificationsIgnoreEntityTypeList\": [],\n    \"reactionNotifications\": true,\n    \"reactionNotificationsNotFollowed\": false,\n    \"notificationGrouping\": true,\n    \"notificationSound\": false,\n    \"defaultReminders\": [],\n    \"defaultRemindersTask\": [],\n    \"useCustomTabList\": false,\n    \"addCustomTabs\": false,\n    \"emailReplyToAllByDefault\": true,\n    \"emailReplyForceHtml\": true,\n    \"doNotFillAssignedUserIfNotRequired\": true,\n    \"followEntityOnStreamPost\": true,\n    \"followCreatedEntities\": false,\n    \"followCreatedEntityTypeList\": [],\n    \"followAsCollaborator\": true,\n    \"emailUseExternalClient\": false,\n    \"scopeColorsDisabled\": false,\n    \"tabColorsDisabled\": false,\n    \"textSearchStoringDisabled\": false,\n    \"calendarSlotDuration\": null,\n    \"calendarScrollHour\": null\n}');
 /*!40000 ALTER TABLE `preferences` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -4837,7 +5009,7 @@ CREATE TABLE `stream_subscription` (
   KEY `IDX_USER_ENTITY` (`user_id`,`entity_id`,`entity_type`),
   KEY `IDX_ENTITY` (`entity_id`,`entity_type`),
   KEY `IDX_USER` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4848,7 +5020,8 @@ SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `stream_subscription` WRITE;
 /*!40000 ALTER TABLE `stream_subscription` DISABLE KEYS */;
 INSERT INTO `stream_subscription` VALUES
-(3,0,'6a6457b6db626b4ee','Task','6a644c0d1b6a80478');
+(3,0,'6a6457b6db626b4ee','Task','6a644c0d1b6a80478'),
+(4,0,'task_adm_0000002','Task','6a644c0d1b6a80478');
 /*!40000 ALTER TABLE `stream_subscription` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -4968,6 +5141,12 @@ CREATE TABLE `target_list` (
 SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `target_list` WRITE;
 /*!40000 ALTER TABLE `target_list` DISABLE KEYS */;
+INSERT INTO `target_list` VALUES
+('tgl_0000000000001','Gerentes de SSO & Prevención de Riesgos - Grandes Mineras',0,'Lista segmentada de Administradores de Contratos y Jefes de SSO de Codelco, BHP, Collahuasi y Anglo American.','2026-04-05 10:00:00',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478'),
+('tgl_0000000000002','Empresas Contratistas de Transporte & Maquinaria Pesada - Antofagasta',0,'Empresas transportistas con más de 20 camiones en faena que requieren acreditación acelerada de conductores.','2026-04-20 11:30:00',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478'),
+('tgl_0000000000003','Proveedores con Observaciones F30-1 Pendientes (Q2 2026)',0,'Subcontratistas mineros con inconsistencias en el pago de cotizaciones previsionales ante la DT.','2026-05-15 09:00:00',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478'),
+('tgl_0000000000004','Asistentes Webinar Ley 20.123 & Subcontratación Minera',0,'Ejecutivos y profesionales de RRHH participantes del seminario online de actualización laboral.','2026-06-01 14:00:00',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478'),
+('tgl_0000000000005','Directores de Operaciones & Logística Minera - Región de Atacama',0,'Base de contactos objetivo para la expansión del portal de acreditación automatizada en Copiapó y Vallenar.','2026-07-05 16:30:00',NULL,NULL,NULL,NULL,'6a644c0d1b6a80478');
 /*!40000 ALTER TABLE `target_list` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -5129,8 +5308,8 @@ LOCK TABLES `task` WRITE;
 INSERT INTO `task` VALUES
 ('task_000000000001','Validar carpetas de acreditación conductores El Teniente',0,'Completed','Normal',NULL,NULL,'2026-07-25',NULL,NULL,NULL,'2026-07-25 06:23:46',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0,NULL),
 ('task_000000000002','Envío de Certificado F30-1 a Gerencia de Contratos',0,'Started','High','2026-07-27 04:00:00',NULL,'2026-07-27',NULL,NULL,NULL,'2026-07-25 06:23:46','2026-07-25 07:36:48','2026-07-25 07:36:49',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',2,NULL),
-('task_adm_0000001','Aprobación final Carpetas Acreditación Turno A El Teniente',0,'Started','High',NULL,NULL,'2026-07-25','2026-07-27',NULL,NULL,'2026-07-25 07:38:36',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0,NULL),
-('task_adm_0000002','Firma de Certificados Previsionales F30-1 Sigdo Koppers',0,'Not Started','High',NULL,NULL,'2026-07-26','2026-07-29',NULL,NULL,'2026-07-25 07:38:36',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0,NULL),
+('task_adm_0000001','Aprobación final Carpetas Acreditación Turno A El Teniente',0,'Not Started','High','2026-07-25 04:00:00','2026-07-28 04:00:00','2026-07-25','2026-07-27',NULL,NULL,'2026-07-25 07:38:36','2026-07-25 21:05:00','2026-07-25 21:05:00',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',1,NULL),
+('task_adm_0000002','Firma de Certificados Previsionales F30-1 Sigdo Koppers',0,'Started','High','2026-07-26 04:00:00','2026-07-30 04:00:00','2026-07-26','2026-07-29',NULL,NULL,'2026-07-25 07:38:36','2026-07-25 21:02:31','2026-07-25 21:03:14',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','6a644c0d1b6a80478',1,NULL),
 ('task_cal_0000001','Digitalizar carpetas acreditación Turno A',0,'Not Started','Normal',NULL,NULL,'2026-07-06','2026-07-10',NULL,NULL,'2026-07-25 08:18:34',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'usr_vanessa_0001',0,NULL),
 ('task_cal_0000002','Preparar informe cumplimiento Ley 20.123 Junio',0,'Started','High',NULL,NULL,'2026-07-07','2026-07-11',NULL,NULL,'2026-07-25 08:18:34',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'usr_francisc_002',0,NULL),
 ('task_cal_0000003','Actualizar matriz de riesgos Antofagasta Minerals',0,'Not Started','High',NULL,NULL,'2026-07-09','2026-07-14',NULL,NULL,'2026-07-25 08:18:34',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'usr_carolina_005',0,NULL),
@@ -5141,7 +5320,7 @@ INSERT INTO `task` VALUES
 ('task_cal_0000008','Preparar documentación licitación Escondida',0,'Not Started','Normal',NULL,NULL,'2026-08-01','2026-08-06',NULL,NULL,'2026-07-25 08:18:34',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'usr_carlos_00003',0,NULL),
 ('task_cal_0000009','Auditoría EPP trabajadores Collahuasi',0,'Not Started','Normal',NULL,NULL,'2026-08-04','2026-08-08',NULL,NULL,'2026-07-25 08:18:34',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'usr_rodrigo_0004',0,NULL),
 ('task_cal_0000010','Informe mensual gestión subcontratación Julio',0,'Not Started','High',NULL,NULL,'2026-08-10','2026-08-14',NULL,NULL,'2026-07-25 08:18:34',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478',0,NULL),
-('tsk_real_000001','Revisión carpetas subcontratistas turno B Codelco',0,'Not Started','High',NULL,NULL,'2026-07-27','2026-07-30',NULL,NULL,'2026-07-25 07:06:36',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'usr_vanessa_0001',0,NULL),
+('tsk_real_000001','Revisión carpetas subcontratistas turno B Codelco',0,'Started','High','2026-07-27 04:00:00','2026-07-31 04:00:00','2026-07-27','2026-07-30',NULL,NULL,'2026-07-25 07:06:36','2026-07-25 21:02:04','2026-07-25 21:02:04',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','usr_vanessa_0001',1,NULL),
 ('tsk_real_000002','Actualización licencias internas faena Los Bronces',0,'Not Started','Normal','2026-07-29 04:00:00','2026-08-02 04:00:00','2026-07-29','2026-08-01',NULL,NULL,'2026-07-25 07:06:36','2026-07-25 08:16:48','2026-07-25 08:16:48',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','usr_rodrigo_0004',2,NULL),
 ('tsk_real_000003','Envío de Certificados F30-1 a Gerencia Contratos BHP',0,'Started','High',NULL,NULL,'2026-07-25','2026-07-27',NULL,NULL,'2026-07-22 07:06:36',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'usr_francisc_002',0,NULL),
 ('tsk_real_000004','Elaboración informe mensual acreditación Sigdo Koppers',0,'Completed','Normal','2026-07-24 04:00:00','2026-07-29 04:00:00','2026-07-24','2026-07-28','2026-07-25 08:14:27',NULL,'2026-07-21 07:06:36','2026-07-25 08:14:27','2026-07-25 08:14:27',NULL,NULL,NULL,NULL,NULL,'6a644c0d1b6a80478','usr_carlos_00003',2,NULL),
@@ -5212,7 +5391,7 @@ CREATE TABLE `team_user` (
   UNIQUE KEY `UNIQ_TEAM_ID_USER_ID` (`team_id`,`user_id`),
   KEY `IDX_TEAM_ID` (`team_id`),
   KEY `IDX_USER_ID` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5696,6 +5875,11 @@ CREATE TABLE `working_time_calendar` (
 SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `working_time_calendar` WRITE;
 /*!40000 ALTER TABLE `working_time_calendar` DISABLE KEYS */;
+INSERT INTO `working_time_calendar` VALUES
+('wtc_0000000000001','Jornada Administrativa Central 5x2 (08:30 - 17:30)',0,'Jornada ordinaria de Lunes a Viernes para equipo corporativo, administración y gestión comercial.','America/Santiago','[[\"08:30\",\"17:30\"]]',0,1,1,1,1,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2026-07-25 21:21:02',NULL,NULL,NULL),
+('wtc_0000000000002','Turno Minero 7x7 Rotativo Faena (08:00 - 20:00)',0,'Turno de 12 horas continuas rotativo 7 días de trabajo por 7 de descanso para personal de acreditación en faena.','America/Santiago','[[\"08:00\",\"20:00\"]]',1,1,1,1,1,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2026-07-25 21:21:02',NULL,NULL,NULL),
+('wtc_0000000000003','Turno Minero 4x3 Operaciones Terreno (07:00 - 19:00)',0,'Jornada concentrada de Lunes a Jueves para auditores de campo SSO y fiscalización de contratos.','America/Santiago','[[\"07:00\",\"19:00\"]]',0,1,1,1,1,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2026-07-25 21:21:02',NULL,NULL,NULL),
+('wtc_0000000000004','Mesa de Ayuda & Control Pases 6x1 (08:00 - 18:00)',0,'Atención continua de Lunes a Sábado para validación urgente de carpetas y emision de pases de ingreso.','America/Santiago','[[\"08:00\",\"18:00\"]]',0,1,1,1,1,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2026-07-25 21:21:02',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `working_time_calendar` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -5781,4 +5965,4 @@ SET AUTOCOMMIT=@OLD_AUTOCOMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-07-25  8:44:06
+-- Dump completed on 2026-07-27  5:49:06

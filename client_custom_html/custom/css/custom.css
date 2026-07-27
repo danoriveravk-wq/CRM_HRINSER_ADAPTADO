@@ -1,246 +1,128 @@
 /* ==========================================================================
-   EspoCRM Premium SaaS Theme (Dark Slate & Hover Micro-Interactions)
+   HRINSER CLEAN STATE - LOGIN ALIVE & CLEAN NATIVE DASHBOARD (NO PURPLE)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Plus+Jakarta+Sans:wght@800&display=swap');
-
-/* 1. CSS Variables - Color Palette & Tokens */
-:root {
-    --c-bg-base: #0f172a;        /* Slate 900 */
-    --c-bg-surface: #1e293b;     /* Slate 800 */
-    --c-bg-surface-hover: #334155; /* Slate 700 */
-    --c-text-primary: #f8fafc;   /* Slate 50 */
-    --c-text-secondary: #94a3b8; /* Slate 400 */
-    --c-border: #334155;         /* Slate 700 */
-    --c-accent: #3b82f6;         /* Blue 500 */
-    --radius-soft: 12px;
-}
-
-/* 2. Base Dark Theme Layout */
-body {
-    background-color: var(--c-bg-base) !important;
-    color: var(--c-text-primary) !important;
-}
-
-/* 3. Cards & Panels (Dashlets) with Safe Hover Elevation */
-.dashlet, .panel, .card {
-    background-color: var(--c-bg-surface) !important;
-    border: 1px solid var(--c-border) !important;
-    border-radius: var(--radius-soft) !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
-    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease !important;
-}
-
-.dashlet:not(.ui-draggable-dragging):hover, 
-.panel:not(.ui-draggable-dragging):hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.45), 0 4px 8px -2px rgba(0, 0, 0, 0.25) !important;
-    border-color: rgba(99, 102, 241, 0.4) !important;
-}
-
-/* Headers de los Dashlets */
-.dashlet .panel-heading, 
-.panel .panel-heading {
-    background-color: transparent !important;
-    border-bottom: 1px solid var(--c-border) !important;
-    color: var(--c-text-primary) !important;
-    font-weight: 600 !important;
-}
-
-/* 4. HRINSER Enterprise Minimalist Brand (Outfit / Plus Jakarta Sans) */
-.navbar-brand img,
-.navbar-logo-container img,
-#navbar img.logo {
-    display: none !important;
-}
-
-.navbar-brand::after {
-    content: 'HRINSER' !important;
-    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
-    font-size: 22px !important;
-    font-weight: 900 !important;
-    letter-spacing: 4px !important;
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-    text-shadow: 0 2px 14px rgba(59, 130, 246, 0.35) !important;
-    display: block !important;
-    padding: 4px 0 !important;
-}
-
-/* 5. Ocultar Footer (© 2026 EspoCRM, Inc.) */
-footer#footer,
-.site-footer,
-#footer,
-.footer {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-
-/* 6. Posicionamiento Quirúrgico de Menús Desplegables Kanban */
-.item-menu-container,
-.item-menu-container.fix-position {
-    position: relative !important;
-}
-
-.item-menu-container .dropdown-menu,
-.item-menu-container.fix-position .dropdown-menu,
-.kanban-item .dropdown-menu,
-.panel-body .dropdown-menu {
-    position: absolute !important;
-    top: 100% !important;
-    right: 0 !important;
-    left: auto !important;
-    margin-top: 2px !important;
-    transform: none !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
-    border: 1px solid var(--c-border) !important;
-    background-color: var(--c-bg-surface) !important;
-    z-index: 9999 !important;
-}
-
-/* 7. REPARACIÓN DEFINITIVA MENÚ KANBAN (Anclaje Relativo & Overflow Visible) */
-.kanban-columns .item,
-.kanban-columns .group-column-list .item,
-.kanban-columns .item-menu-container {
-    position: relative !important;
-}
-
-.kanban-columns .item-menu-container .dropdown-menu,
-.kanban-columns .list-row-dropdown-menu,
-.group-column-list .dropdown-menu {
-    position: absolute !important;
-    top: 100% !important;
-    right: 0 !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    margin-top: 2px !important;
-    z-index: 1050 !important;
-}
-
-.kanban-columns .group-column-list {
-    overflow: visible !important;
-}
-
-/* ==========================================================================
-   8. EspoCRM Kanban - Drag & Drop Visual WOW Experience
-   ========================================================================== */
-
-/* Cursor interactivo de mano agarrando */
-.kanban-columns .item,
-.group-column-list .item,
-.panel-body {
-    cursor: grab !important;
-}
-
-/* Tarjeta en vuelo durante el arrastre (jQuery UI Helper) */
-.ui-sortable-helper,
-.kanban-columns .item.ui-sortable-helper {
-    cursor: grabbing !important;
-    z-index: 100000 !important;
-    opacity: 0.94 !important;
-    transform: scale(1.03) rotate(2deg) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 2px var(--c-primary) !important;
-    border-radius: 8px !important;
-    transition: none !important;
-    pointer-events: none !important;
-}
-
-/* Zona de destino donde aterrizará la tarjeta (Placeholder) */
-.ui-sortable-placeholder,
-.kanban-columns .ui-sortable-placeholder {
-    visibility: visible !important;
-    border: 2px dashed var(--c-primary) !important;
-    background-color: rgba(99, 102, 241, 0.12) !important;
-    border-radius: 8px !important;
-    margin-bottom: 12px !important;
-    min-height: 80px !important;
-}
-
-/* Resaltado de la columna receptora */
-.group-column-list.drop-hover {
-    background-color: rgba(99, 102, 241, 0.08) !important;
-    outline: 2px dashed var(--c-primary) !important;
-    outline-offset: -4px !important;
-    border-radius: 8px !important;
-}
-
-/* ==========================================================================
-   9. HRINSER Corporate Login - Organic Pulse Background & Glassmorphism
-   ========================================================================== */
-
-/* Fondo Orgánico Vivo con Animación Respiración (Pulse) */
+/* 1. Fondo VIVO y Palpitante ÚNICAMENTE en la pantalla de LOGIN */
 body.login-page,
-#main-container.login,
-.container.content {
-    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.22) 0%, rgba(15, 23, 42, 0.98) 70%) !important;
-    animation: organicPulse 8s ease-in-out infinite alternate !important;
-    min-height: 100vh;
+body.login-page #main-container {
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.5) 0%, rgba(30, 27, 75, 0.85) 50%, #060810 88%), #060810 !important;
+    animation: breathingGlow 8s ease-in-out infinite alternate !important;
 }
 
-@keyframes organicPulse {
+@keyframes breathingGlow {
     0% {
-        background: radial-gradient(circle at 30% 35%, rgba(99, 102, 241, 0.28) 0%, rgba(15, 23, 42, 0.98) 65%) !important;
+        background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.4) 0%, rgba(15, 23, 42, 0.92) 55%, #05070c 88%), #05070c !important;
     }
     50% {
-        background: radial-gradient(circle at 70% 65%, rgba(168, 85, 247, 0.25) 0%, rgba(15, 23, 42, 0.98) 75%) !important;
+        background: radial-gradient(circle at 48% 42%, rgba(147, 51, 234, 0.6) 0%, rgba(30, 27, 75, 0.88) 60%, #080a14 90%), #080a14 !important;
     }
     100% {
-        background: radial-gradient(circle at 35% 75%, rgba(236, 72, 153, 0.22) 0%, rgba(15, 23, 42, 0.98) 70%) !important;
+        background: radial-gradient(circle at 52% 58%, rgba(59, 130, 246, 0.55) 0%, rgba(17, 24, 39, 0.92) 52%, #05070c 88%), #05070c !important;
     }
 }
 
-/* Tarjeta Glassmorphism de Inicio de Sesión */
-#login.panel {
-    background: rgba(30, 41, 59, 0.82) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 35px rgba(99, 102, 241, 0.25) !important;
-    border-radius: 20px !important;
-    padding: 10px !important;
+/* 2. Fondo LISO y Limpio Corporativo para el DASHBOARD INTERNO (Al Ingresar) */
+body:not(.login-page),
+body:not(.login-page) #main-container,
+#main-container:not(.login) {
+    background: #171923 !important;
+    background-image: none !important;
+    animation: none !important;
 }
 
-/* Marca Corporativa HRINSER en lugar del logo original */
-#login .logo-container img {
+/* Título HRINSER Sobrio en Blanco Puro Centrado */
+.hrinser-brand-title {
+    font-family: 'Outfit', 'Inter', 'Montserrat', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    letter-spacing: 6px !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    margin: 0 auto !important;
+    padding: 10px 0 !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    text-shadow: none !important;
+    width: 100% !important;
+}
+
+/* Ocultar recuadros nativos */
+#login .panel-heading {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+/* Tarjeta Obsidiana Flotante */
+#login.panel,
+#login {
+    background: rgba(15, 18, 28, 0.92) !important;
+    background-color: rgba(15, 18, 28, 0.92) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Botón Azul Corporativo */
+#btn-login,
+#login #btn-login {
+    background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%) !important;
+    border: none !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 12px 24px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4) !important;
+    width: 100% !important;
+}
+
+/* Ocultar footer en login */
+body.login-page footer {
     display: none !important;
 }
 
-#login .logo-container {
-    text-align: center !important;
-    padding: 15px 0 5px 0 !important;
+/* Forzar enlaces limpios en blanco/gris brillante sin morados */
+a, a:link, a:visited, a:focus, a:active,
+.cell a, .cell a:visited,
+.dashlet a, .dashlet a:visited,
+.panel a, .panel a:visited {
+    color: #E2E8F0 !important;
+    text-decoration: none !important;
 }
 
-#login .logo-container::after {
-    content: HRINSER;
-    font-family: 'Outfit', 'Inter', sans-serif !important;
-    font-size: 36px !important;
+a:hover, .cell a:hover, .dashlet a:hover {
+    color: #FFFFFF !important;
+}
+
+/* MARCA HRINSER MAS GRANDE EN EL ENCABEZADO SUPERIOR IZQUIERDO */
+.navbar-logo-container .navbar-brand,
+.navbar-header .navbar-brand,
+#header .logo-container .navbar-brand {
+    font-size: 0 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding-left: 15px !important;
+}
+
+.navbar-logo-container .navbar-brand img.logo,
+.navbar-header .navbar-brand img.logo {
+    display: none !important;
+}
+
+.navbar-logo-container .navbar-brand::after,
+.navbar-header .navbar-brand::after {
+    content: 'HRINSER' !important;
+    font-family: 'Outfit', 'Inter', 'Montserrat', sans-serif !important;
+    font-size: 25px !important;
     font-weight: 900 !important;
-    letter-spacing: 4px !important;
-    background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    display: block !important;
-    text-shadow: 0 0 20px rgba(192, 132, 252, 0.3) !important;
-}
-
-/* Botón de Iniciar Sesión Estilizado */
-#btn-login {
-    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
-    border: none !important;
-    font-weight: 700 !important;
-    letter-spacing: 1px !important;
-    padding: 10px 24px !important;
-    border-radius: 10px !important;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4) !important;
-    transition: all 0.3s ease !important;
-}
-
-#btn-login:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5) !important;
+    letter-spacing: 5px !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase !important;
 }
