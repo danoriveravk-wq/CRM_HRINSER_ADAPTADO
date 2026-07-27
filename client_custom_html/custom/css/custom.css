@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TEMA 14 DEFINITIVO: ANTOFAGASTA MINERAL CON CORRECCIONES DE INTERFAZ
+   HOJA DE ESTILOS PERSONALIZADA HRINSER CRM - ESTADO OSCURO ORIGINAL LIMPIO
    ========================================================================== */
 
 /* 1. Fondo VIVO únicamente en la pantalla de LOGIN */
@@ -15,7 +15,7 @@ body.login-page #main-container {
     100% { background: radial-gradient(circle at 52% 58%, rgba(59, 130, 246, 0.55) 0%, rgba(17, 24, 39, 0.92) 52%, #05070c 88%), #05070c !important; }
 }
 
-/* 2. FONDO PRINCIPAL GRIS CALIZA CLARO (#F2F4F7) */
+/* 2. FONDO PRINCIPAL OSCURO LIMPIO (#171923) INTERIOR CRM */
 html:not(.login-page),
 body:not(.login-page),
 body:not(.login-page) #main-container,
@@ -24,42 +24,14 @@ body:not(.login-page) #content,
 body:not(.login-page) .container,
 body:not(.login-page) .container.content,
 #main-container:not(.login) {
-    background: #F2F4F7 !important;
-    background-color: #F2F4F7 !important;
+    background: #171923 !important;
+    background-color: #171923 !important;
     background-image: none !important;
     animation: none !important;
-    color: #0F172A !important;
-}
-
-/* 3. MENÚ LATERAL (SIDEBAR) EN AZUL ANTRACITA FAENA CON PADDING CONFORME */
-#sidebar, .navbar-vertical, .sidebar-nav {
-    background-color: #1E293B !important;
-    border-right: 1px solid #334155 !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-}
-
-#sidebar .nav-link, 
-#sidebar a, 
-#sidebar li a, 
-#sidebar .navbar-nav > li > a {
-    color: #94A3B8 !important;
-    padding: 10px 16px !important;
-    margin: 2px 0 !important;
-    display: block !important;
-    text-decoration: none !important;
-}
-
-#sidebar .nav-link:hover, 
-#sidebar a:hover, 
-#sidebar li.active a, 
-#sidebar .navbar-nav > li.active > a {
     color: #FFFFFF !important;
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    border-radius: 8px !important;
 }
 
-/* LOGO HRINSER EN COBRE INDUSTRIAL (#D97706) */
+/* 3. LOGO HRINSER EN HEADER SUPERIOR Y NAVEGADOR */
 .navbar-logo-container .navbar-brand,
 .navbar-header .navbar-brand,
 #header .logo-container .navbar-brand {
@@ -82,88 +54,53 @@ body:not(.login-page) .container.content,
     font-size: 25px !important;
     font-weight: 900 !important;
     letter-spacing: 5px !important;
-    color: #D97706 !important;
+    color: #FFFFFF !important;
     text-transform: uppercase !important;
 }
 
-/* 4. ENCABEZADO SUPERIOR BLANCO LIMPIO (#FFFFFF) */
-#header, .navbar:not(.navbar-vertical), #navbar {
-    background-color: #FFFFFF !important;
-    border-bottom: 1px solid #E2E8F0 !important;
+/* 4. TEXTOS Y ENLACES - BLANCO PURO SIN SUBRAYADOS NI MORADOS */
+a, a:link, a:visited, a:focus, a:active,
+.cell a, .dashlet a, .panel a {
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
 }
 
-#header a, #header .nav-link, #header .fas, #header .far, #header input {
-    color: #0F172A !important;
+a:hover, .cell a:hover, .dashlet a:hover {
+    color: #60A5FA !important;
+    text-decoration: none !important;
 }
 
-/* 5. TARJETAS Y CAJAS 100% BLANCO PURO (#FFFFFF) */
-.panel, .dashlet, .cell, .modal-content, .card,
-.list-group-item:not(.show-more), .table, .table tr, .table td {
-    background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
-    border-color: #E2E8F0 !important;
-    color: #0F172A !important;
+/* LOGIN SOBRIO */
+.hrinser-brand-title {
+    font-family: 'Outfit', 'Inter', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    letter-spacing: 6px !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    margin: 0 auto !important;
+    padding: 10px 0 !important;
+    text-align: center !important;
 }
 
-.panel, .dashlet, .card {
-    border: 1px solid #CBD5E1 !important;
+#login.panel, #login {
+    background: rgba(15, 18, 28, 0.92) !important;
+    backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8) !important;
+}
+
+#btn-login, #login #btn-login {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+    border: none !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 12px 24px !important;
     border-radius: 10px !important;
-    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04) !important;
+    width: 100% !important;
 }
 
-.panel-heading, .table th, .dashlet-header {
-    background-color: #FFFFFF !important;
-    border-bottom: 1px solid #E2E8F0 !important;
-    color: #0F172A !important;
-    font-weight: 700 !important;
-}
-
-.table-hover tbody tr:hover {
-    background-color: #F8FAFC !important;
-}
-
-/* 6. NUMEROS Y MESES DE GRAFICOS EN OSCURO NÍTIDO (#0F172A) */
-.flotr-tick-label,
-.tickLabel,
-.flotr-axis-title,
-.flotr-grid-label,
-.flotr-legend-label,
-div.flotr-tick-label {
-    color: #0F172A !important;
-    fill: #0F172A !important;
-    font-weight: 600 !important;
-    opacity: 1 !important;
-}
-
-/* 7. CALENDARIO 100% BLANCO (#FFFFFF) */
-.calendar-dashlet,
-.calendar,
-.full-calendar,
-.fc,
-.fc-view,
-.fc-view-container,
-.fc-widget-content,
-.fc-widget-header,
-.fc-head,
-.fc-body,
-.fc-day,
-.fc-day-number,
-.fc-day-header,
-.fc-unthemed th,
-.fc-unthemed td,
-.fc-unthemed .fc-divider,
-.fc-unthemed .fc-popover,
-.fc-unthemed .fc-row,
-.fc-bg {
-    background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
-    color: #0F172A !important;
-    border-color: #E2E8F0 !important;
-}
-
-.fc-day-header, .fc-day-number, .fc-head-container th, .fc-widget-header {
-    color: #0F172A !important;
-    font-weight: 700 !important;
-}
-
-/* 8. BARRA MOSTRAR
+body.login-page footer { display: none !important; }
