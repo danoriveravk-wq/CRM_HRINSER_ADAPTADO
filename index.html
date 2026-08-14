@@ -2222,57 +2222,71 @@
             4: "Piloto"
         };
 
-        function avanzarCRM(nombre, pasoActual) {
+        function avanzarCRM(idProspecto, pasoActual) {
             const siguientePaso = pasoActual + 1;
             if (siguientePaso > 4) return;
 
             const origen = document.getElementById(`crm-col-${pasoActual}`);
             const destino = document.getElementById(`crm-col-${siguientePaso}`);
+            
+            if (!origen || !destino) return;
 
-            let tarjeta = null;
-            for (let child of origen.children) {
-                if (child.innerHTML.includes(nombre)) {
-                    tarjeta = child;
-                    break;
+            let tarjeta = origen.querySelector(`[data-lead-id="${idProspecto}"]`);
+            
+            // Fallback por si la tarjeta inicial aún no tenía data-lead-id
+            if (!tarjeta) {
+                for (let child of origen.children) {
+                    if (child.innerHTML.includes(idProspecto)) {
+                        tarjeta = child;
+                        break;
+                    }
                 }
             }
 
             if (tarjeta) {
                 origen.removeChild(tarjeta);
+                const nombre = tarjeta.getAttribute('data-lead-name') || idProspecto;
+                tarjeta.setAttribute('data-lead-id', idProspecto);
+                tarjeta.setAttribute('data-step', siguientePaso);
                 
                 if (siguientePaso === 4) {
                     tarjeta.innerHTML = `
                         <h4 class="font-bold text-sm text-white">${nombre}</h4>
                         <div class="flex justify-between text-[11px] text-gray-400 mt-3 font-mono">
-                            <span>RUT: Sincronizado</span>
-                            <span>Avanzado</span>
+                            <span>Estado: Sincronizado</span>
+                            <span>Cierre Exitoso</span>
                         </div>
                         <div class="mt-3 text-center text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 py-1.5 font-mono">
-                            Piloto Firmado 6 UF
+                            ✓ Piloto Firmado 6 UF
                         </div>
                     `;
                 } else {
+                    const siguienteNombreCol = colMap[siguientePaso + 1] ? colMap[siguientePaso + 1].toUpperCase() : '';
                     tarjeta.innerHTML = `
                         <h4 class="font-bold text-sm text-white">${nombre}</h4>
                         <div class="flex justify-between text-[11px] text-gray-400 mt-3 font-mono">
-                            <span>RUT: Sincronizado</span>
-                            <span>Avanzado</span>
+                            <span>RUT: Validado</span>
+                            <span>Etapa ${siguientePaso}/4</span>
                         </div>
-                        <button onclick="avanzarCRM('${nombre}', ${siguientePaso})" class="w-full bg-codelco-gray hover:bg-codelco-orange border border-gray-800 hover:border-codelco-orange font-bold text-[10px] text-white py-1.5 mt-3 transition flex justify-center items-center gap-1 font-mono">
-                            <span>AVANZAR A ${colMap[siguientePaso + 1].toUpperCase()}</span> →
+                        <button onclick="avanzarCRM('${idProspecto}', ${siguientePaso})" class="w-full bg-codelco-gray hover:bg-codelco-orange border border-gray-800 hover:border-codelco-orange font-bold text-[10px] text-white py-1.5 mt-3 transition flex justify-center items-center gap-1 font-mono">
+                            <span>AVANZAR A ${siguienteNombreCol}</span> →
                         </button>
                     `;
                 }
 
                 destino.appendChild(tarjeta);
                 actualizarCRMContadores();
-                showToast(`Prospecto "${nombre}" avanzado en el embudo.`, "success");
+                showToast(`Prospecto "${nombre}" avanzado a ${colMap[siguientePaso]}.`, "success");
             }
         }
 
         function actualizarCRMContadores() {
             for (let i = 1; i <= 4; i++) {
-                document.getElementById(`crm-col-${i}-count`).innerText = document.getElementById(`crm-col-${i}`).children.length;
+                const col = document.getElementById(`crm-col-${i}`);
+                const countEl = document.getElementById(`crm-col-${i}-count`);
+                if (col && countEl) {
+                    countEl.innerText = col.children.length;
+                }
             }
         }
 
@@ -2295,15 +2309,20 @@
             }
 
             const col1 = document.getElementById('crm-col-1');
+            const leadId = 'lead-' + Date.now();
             const card = document.createElement('div');
             card.className = "bg-codelco-dark p-4 border border-gray-850 hover:border-codelco-orange transition";
+            card.setAttribute('data-lead-id', leadId);
+            card.setAttribute('data-lead-name', name);
+            card.setAttribute('data-step', 1);
+
             card.innerHTML = `
                 <h4 class="font-bold text-sm text-white">${name}</h4>
                 <div class="flex justify-between text-[11px] text-gray-400 mt-3 font-mono">
                     <span>RUT: ${rut}</span>
                     <span>${workers} Trab.</span>
                 </div>
-                <button onclick="avanzarCRM('${name}', 1)" class="w-full bg-codelco-gray hover:bg-codelco-orange border border-gray-800 hover:border-codelco-orange font-bold text-[10px] text-white py-1.5 mt-3 transition flex justify-center items-center gap-1 font-mono">
+                <button onclick="avanzarCRM('${leadId}', 1)" class="w-full bg-codelco-gray hover:bg-codelco-orange border border-gray-800 hover:border-codelco-orange font-bold text-[10px] text-white py-1.5 mt-3 transition flex justify-center items-center gap-1 font-mono">
                     <span>AVANZAR A DIAGNÓSTICO</span> →
                 </button>
             `;
